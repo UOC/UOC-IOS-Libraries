@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DDB8F75C18BFAAE2008E56A9 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB8F75B18BFAAE2008E56A9 /* NextViewController.m */; };
+		DDE1D40218B219A700050737 /* ipadWebLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDE1D40118B219A700050737 /* ipadWebLogin.xib */; };
+		DDE1D40618B21AF200050737 /* webController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE1D40418B21AF200050737 /* webController.m */; };
+		DDE1D40718B21AF200050737 /* webController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDE1D40518B21AF200050737 /* webController.xib */; };
+		DDE5A87D18B4AF90007C0C39 /* authObj.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE5A87C18B4AF90007C0C39 /* authObj.m */; };
+		DDE72D3E18AE15C7003DDF77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE72D3D18AE15C7003DDF77 /* Foundation.framework */; };
+		DDE72D4018AE15C7003DDF77 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE72D3F18AE15C7003DDF77 /* CoreGraphics.framework */; };
+		DDE72D4218AE15C7003DDF77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE72D4118AE15C7003DDF77 /* UIKit.framework */; };
+		DDE72D4818AE15C7003DDF77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDE72D4618AE15C7003DDF77 /* InfoPlist.strings */; };
+		DDE72D4A18AE15C7003DDF77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE72D4918AE15C7003DDF77 /* main.m */; };
+		DDE72D4E18AE15C7003DDF77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE72D4D18AE15C7003DDF77 /* AppDelegate.m */; };
+		DDE72D5118AE15C7003DDF77 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE72D4F18AE15C7003DDF77 /* Main_iPhone.storyboard */; };
+		DDE72D5418AE15C7003DDF77 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE72D5218AE15C7003DDF77 /* Main_iPad.storyboard */; };
+		DDE72D5C18AE15C7003DDF77 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE72D5B18AE15C7003DDF77 /* Images.xcassets */; };
+		DDE72D7B18AE180C003DDF77 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE72D7A18AE180C003DDF77 /* loginViewController.m */; };
+		DDE72D7D18AE1D08003DDF77 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE72D7C18AE1D08003DDF77 /* Security.framework */; };
+		DDE72D7F18AE1D15003DDF77 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE72D7E18AE1D15003DDF77 /* SystemConfiguration.framework */; };
+		DDE72D8218AE27AA003DDF77 /* navController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE72D8118AE27AA003DDF77 /* navController.m */; };
+		DDF78C1C18D1C840003B63C4 /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78BE318D1C840003B63C4 /* Board.m */; };
+		DDF78C1D18D1C840003B63C4 /* BoardList.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78BE518D1C840003B63C4 /* BoardList.m */; };
+		DDF78C1E18D1C840003B63C4 /* Classroom.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78BE718D1C840003B63C4 /* Classroom.m */; };
+		DDF78C1F18D1C840003B63C4 /* ClassroomList.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78BE918D1C840003B63C4 /* ClassroomList.m */; };
+		DDF78C2018D1C840003B63C4 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78BEB18D1C840003B63C4 /* Event.m */; };
+		DDF78C2118D1C840003B63C4 /* EventList.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78BED18D1C840003B63C4 /* EventList.m */; };
+		DDF78C2218D1C840003B63C4 /* Folder.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78BEF18D1C840003B63C4 /* Folder.m */; };
+		DDF78C2318D1C840003B63C4 /* FolderList.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78BF118D1C840003B63C4 /* FolderList.m */; };
+		DDF78C2518D1C840003B63C4 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78BF518D1C840003B63C4 /* Message.m */; };
+		DDF78C2618D1C840003B63C4 /* MessageBody.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78BF718D1C840003B63C4 /* MessageBody.m */; };
+		DDF78C2718D1C840003B63C4 /* MessageHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78BF918D1C840003B63C4 /* MessageHistory.m */; };
+		DDF78C2818D1C840003B63C4 /* MessageHistoryDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78BFB18D1C840003B63C4 /* MessageHistoryDetail.m */; };
+		DDF78C2918D1C840003B63C4 /* MessageList.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78BFD18D1C840003B63C4 /* MessageList.m */; };
+		DDF78C2A18D1C840003B63C4 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78BFF18D1C840003B63C4 /* Person.m */; };
+		DDF78C2B18D1C840003B63C4 /* PersonList.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78C0118D1C840003B63C4 /* PersonList.m */; };
+		DDF78C2C18D1C840003B63C4 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78C0318D1C840003B63C4 /* Profile.m */; };
+		DDF78C2D18D1C840003B63C4 /* ProfileList.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78C0518D1C840003B63C4 /* ProfileList.m */; };
+		DDF78C2E18D1C840003B63C4 /* Resource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78C0718D1C840003B63C4 /* Resource.m */; };
+		DDF78C2F18D1C840003B63C4 /* ResourceList.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78C0918D1C840003B63C4 /* ResourceList.m */; };
+		DDF78C3018D1C840003B63C4 /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78C0B18D1C840003B63C4 /* Setting.m */; };
+		DDF78C3118D1C840003B63C4 /* SettingList.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78C0D18D1C840003B63C4 /* SettingList.m */; };
+		DDF78C3218D1C840003B63C4 /* SettingValue.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78C0F18D1C840003B63C4 /* SettingValue.m */; };
+		DDF78C3318D1C840003B63C4 /* Subject.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78C1118D1C840003B63C4 /* Subject.m */; };
+		DDF78C3418D1C840003B63C4 /* SubjectList.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78C1318D1C840003B63C4 /* SubjectList.m */; };
+		DDF78C3518D1C840003B63C4 /* TeachingMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78C1518D1C840003B63C4 /* TeachingMaterial.m */; };
+		DDF78C3618D1C840003B63C4 /* TeachingMaterialList.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78C1718D1C840003B63C4 /* TeachingMaterialList.m */; };
+		DDF78C3718D1C840003B63C4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78C1918D1C840003B63C4 /* User.m */; };
+		DDF78C3818D1C840003B63C4 /* UserList.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78C1B18D1C840003B63C4 /* UserList.m */; };
+		DDF78C3C18D1D1B5003B63C4 /* UserGetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78C3B18D1D1B5003B63C4 /* UserGetViewController.m */; };
+		DDF78C3F18D1DEA7003B63C4 /* MailMessagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78C3E18D1DEA7003B63C4 /* MailMessagesTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DDB8F75A18BFAAE2008E56A9 /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		DDB8F75B18BFAAE2008E56A9 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
+		DDE1D40118B219A700050737 /* ipadWebLogin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ipadWebLogin.xib; sourceTree = "<group>"; };
+		DDE1D40318B21AF200050737 /* webController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webController.h; sourceTree = "<group>"; };
+		DDE1D40418B21AF200050737 /* webController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webController.m; sourceTree = "<group>"; };
+		DDE1D40518B21AF200050737 /* webController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = webController.xib; sourceTree = "<group>"; };
+		DDE5A87B18B4AF90007C0C39 /* authObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = authObj.h; sourceTree = "<group>"; };
+		DDE5A87C18B4AF90007C0C39 /* authObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = authObj.m; sourceTree = "<group>"; };
+		DDE72D3A18AE15C7003DDF77 /* loginCampusAuthNZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loginCampusAuthNZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDE72D3D18AE15C7003DDF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DDE72D3F18AE15C7003DDF77 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DDE72D4118AE15C7003DDF77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DDE72D4518AE15C7003DDF77 /* loginCampusAuthNZ-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "loginCampusAuthNZ-Info.plist"; sourceTree = "<group>"; };
+		DDE72D4718AE15C7003DDF77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DDE72D4918AE15C7003DDF77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DDE72D4B18AE15C7003DDF77 /* loginCampusAuthNZ-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "loginCampusAuthNZ-Prefix.pch"; sourceTree = "<group>"; };
+		DDE72D4C18AE15C7003DDF77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DDE72D4D18AE15C7003DDF77 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DDE72D5018AE15C7003DDF77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		DDE72D5318AE15C7003DDF77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		DDE72D5B18AE15C7003DDF77 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DDE72D6218AE15C8003DDF77 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DDE72D7818AE1796003DDF77 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		DDE72D7918AE180B003DDF77 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
+		DDE72D7A18AE180C003DDF77 /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
+		DDE72D7C18AE1D08003DDF77 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DDE72D7E18AE1D15003DDF77 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DDE72D8018AE27AA003DDF77 /* navController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = navController.h; sourceTree = "<group>"; };
+		DDE72D8118AE27AA003DDF77 /* navController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = navController.m; sourceTree = "<group>"; };
+		DDF78BE218D1C840003B63C4 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
+		DDF78BE318D1C840003B63C4 /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Board.m; sourceTree = "<group>"; };
+		DDF78BE418D1C840003B63C4 /* BoardList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardList.h; sourceTree = "<group>"; };
+		DDF78BE518D1C840003B63C4 /* BoardList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardList.m; sourceTree = "<group>"; };
+		DDF78BE618D1C840003B63C4 /* Classroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classroom.h; sourceTree = "<group>"; };
+		DDF78BE718D1C840003B63C4 /* Classroom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Classroom.m; sourceTree = "<group>"; };
+		DDF78BE818D1C840003B63C4 /* ClassroomList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassroomList.h; sourceTree = "<group>"; };
+		DDF78BE918D1C840003B63C4 /* ClassroomList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassroomList.m; sourceTree = "<group>"; };
+		DDF78BEA18D1C840003B63C4 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		DDF78BEB18D1C840003B63C4 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		DDF78BEC18D1C840003B63C4 /* EventList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventList.h; sourceTree = "<group>"; };
+		DDF78BED18D1C840003B63C4 /* EventList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventList.m; sourceTree = "<group>"; };
+		DDF78BEE18D1C840003B63C4 /* Folder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Folder.h; sourceTree = "<group>"; };
+		DDF78BEF18D1C840003B63C4 /* Folder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Folder.m; sourceTree = "<group>"; };
+		DDF78BF018D1C840003B63C4 /* FolderList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderList.h; sourceTree = "<group>"; };
+		DDF78BF118D1C840003B63C4 /* FolderList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderList.m; sourceTree = "<group>"; };
+		DDF78BF418D1C840003B63C4 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		DDF78BF518D1C840003B63C4 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		DDF78BF618D1C840003B63C4 /* MessageBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageBody.h; sourceTree = "<group>"; };
+		DDF78BF718D1C840003B63C4 /* MessageBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageBody.m; sourceTree = "<group>"; };
+		DDF78BF818D1C840003B63C4 /* MessageHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageHistory.h; sourceTree = "<group>"; };
+		DDF78BF918D1C840003B63C4 /* MessageHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageHistory.m; sourceTree = "<group>"; };
+		DDF78BFA18D1C840003B63C4 /* MessageHistoryDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageHistoryDetail.h; sourceTree = "<group>"; };
+		DDF78BFB18D1C840003B63C4 /* MessageHistoryDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageHistoryDetail.m; sourceTree = "<group>"; };
+		DDF78BFC18D1C840003B63C4 /* MessageList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageList.h; sourceTree = "<group>"; };
+		DDF78BFD18D1C840003B63C4 /* MessageList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageList.m; sourceTree = "<group>"; };
+		DDF78BFE18D1C840003B63C4 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		DDF78BFF18D1C840003B63C4 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		DDF78C0018D1C840003B63C4 /* PersonList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonList.h; sourceTree = "<group>"; };
+		DDF78C0118D1C840003B63C4 /* PersonList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonList.m; sourceTree = "<group>"; };
+		DDF78C0218D1C840003B63C4 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		DDF78C0318D1C840003B63C4 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
+		DDF78C0418D1C840003B63C4 /* ProfileList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileList.h; sourceTree = "<group>"; };
+		DDF78C0518D1C840003B63C4 /* ProfileList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileList.m; sourceTree = "<group>"; };
+		DDF78C0618D1C840003B63C4 /* Resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Resource.h; sourceTree = "<group>"; };
+		DDF78C0718D1C840003B63C4 /* Resource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Resource.m; sourceTree = "<group>"; };
+		DDF78C0818D1C840003B63C4 /* ResourceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceList.h; sourceTree = "<group>"; };
+		DDF78C0918D1C840003B63C4 /* ResourceList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceList.m; sourceTree = "<group>"; };
+		DDF78C0A18D1C840003B63C4 /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
+		DDF78C0B18D1C840003B63C4 /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
+		DDF78C0C18D1C840003B63C4 /* SettingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingList.h; sourceTree = "<group>"; };
+		DDF78C0D18D1C840003B63C4 /* SettingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingList.m; sourceTree = "<group>"; };
+		DDF78C0E18D1C840003B63C4 /* SettingValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingValue.h; sourceTree = "<group>"; };
+		DDF78C0F18D1C840003B63C4 /* SettingValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingValue.m; sourceTree = "<group>"; };
+		DDF78C1018D1C840003B63C4 /* Subject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subject.h; sourceTree = "<group>"; };
+		DDF78C1118D1C840003B63C4 /* Subject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subject.m; sourceTree = "<group>"; };
+		DDF78C1218D1C840003B63C4 /* SubjectList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectList.h; sourceTree = "<group>"; };
+		DDF78C1318D1C840003B63C4 /* SubjectList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectList.m; sourceTree = "<group>"; };
+		DDF78C1418D1C840003B63C4 /* TeachingMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeachingMaterial.h; sourceTree = "<group>"; };
+		DDF78C1518D1C840003B63C4 /* TeachingMaterial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeachingMaterial.m; sourceTree = "<group>"; };
+		DDF78C1618D1C840003B63C4 /* TeachingMaterialList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeachingMaterialList.h; sourceTree = "<group>"; };
+		DDF78C1718D1C840003B63C4 /* TeachingMaterialList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeachingMaterialList.m; sourceTree = "<group>"; };
+		DDF78C1818D1C840003B63C4 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		DDF78C1918D1C840003B63C4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		DDF78C1A18D1C840003B63C4 /* UserList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserList.h; sourceTree = "<group>"; };
+		DDF78C1B18D1C840003B63C4 /* UserList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserList.m; sourceTree = "<group>"; };
+		DDF78C3A18D1D1B5003B63C4 /* UserGetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserGetViewController.h; sourceTree = "<group>"; };
+		DDF78C3B18D1D1B5003B63C4 /* UserGetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserGetViewController.m; sourceTree = "<group>"; };
+		DDF78C3D18D1DEA7003B63C4 /* MailMessagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailMessagesTableViewController.h; sourceTree = "<group>"; };
+		DDF78C3E18D1DEA7003B63C4 /* MailMessagesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailMessagesTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DDE72D3718AE15C7003DDF77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDE72D7F18AE1D15003DDF77 /* SystemConfiguration.framework in Frameworks */,
+				DDE72D7D18AE1D08003DDF77 /* Security.framework in Frameworks */,
+				DDE72D4018AE15C7003DDF77 /* CoreGraphics.framework in Frameworks */,
+				DDE72D4218AE15C7003DDF77 /* UIKit.framework in Frameworks */,
+				DDE72D3E18AE15C7003DDF77 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DDE72D3118AE15C7003DDF77 = {
+			isa = PBXGroup;
+			children = (
+				DDE72D4318AE15C7003DDF77 /* loginCampusAuthNZ */,
+				DDE72D3C18AE15C7003DDF77 /* Frameworks */,
+				DDE72D3B18AE15C7003DDF77 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DDE72D3B18AE15C7003DDF77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDE72D3A18AE15C7003DDF77 /* loginCampusAuthNZ.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDE72D3C18AE15C7003DDF77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDE72D7E18AE1D15003DDF77 /* SystemConfiguration.framework */,
+				DDE72D7C18AE1D08003DDF77 /* Security.framework */,
+				DDE72D3D18AE15C7003DDF77 /* Foundation.framework */,
+				DDE72D3F18AE15C7003DDF77 /* CoreGraphics.framework */,
+				DDE72D4118AE15C7003DDF77 /* UIKit.framework */,
+				DDE72D6218AE15C8003DDF77 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDE72D4318AE15C7003DDF77 /* loginCampusAuthNZ */ = {
+			isa = PBXGroup;
+			children = (
+				DDF78C3918D1C8F3003B63C4 /* Exemple App i Crides Llibreria */,
+				DDF78BE118D1C7C8003B63C4 /* Llibreria */,
+				DDE72D4C18AE15C7003DDF77 /* AppDelegate.h */,
+				DDE72D4D18AE15C7003DDF77 /* AppDelegate.m */,
+				DDE5A87B18B4AF90007C0C39 /* authObj.h */,
+				DDE5A87C18B4AF90007C0C39 /* authObj.m */,
+				DDE72D7818AE1796003DDF77 /* Constants.h */,
+				DDE72D7918AE180B003DDF77 /* loginViewController.h */,
+				DDE72D7A18AE180C003DDF77 /* loginViewController.m */,
+				DDE1D40118B219A700050737 /* ipadWebLogin.xib */,
+				DDE72D4F18AE15C7003DDF77 /* Main_iPhone.storyboard */,
+				DDE72D5218AE15C7003DDF77 /* Main_iPad.storyboard */,
+				DDE72D8018AE27AA003DDF77 /* navController.h */,
+				DDE72D8118AE27AA003DDF77 /* navController.m */,
+				DDE1D40318B21AF200050737 /* webController.h */,
+				DDE1D40418B21AF200050737 /* webController.m */,
+				DDE1D40518B21AF200050737 /* webController.xib */,
+				DDE72D5B18AE15C7003DDF77 /* Images.xcassets */,
+				DDE72D4418AE15C7003DDF77 /* Supporting Files */,
+			);
+			path = loginCampusAuthNZ;
+			sourceTree = "<group>";
+		};
+		DDE72D4418AE15C7003DDF77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDE72D4518AE15C7003DDF77 /* loginCampusAuthNZ-Info.plist */,
+				DDE72D4618AE15C7003DDF77 /* InfoPlist.strings */,
+				DDE72D4918AE15C7003DDF77 /* main.m */,
+				DDE72D4B18AE15C7003DDF77 /* loginCampusAuthNZ-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DDF78BE118D1C7C8003B63C4 /* Llibreria */ = {
+			isa = PBXGroup;
+			children = (
+				DDF78BE218D1C840003B63C4 /* Board.h */,
+				DDF78BE318D1C840003B63C4 /* Board.m */,
+				DDF78BE418D1C840003B63C4 /* BoardList.h */,
+				DDF78BE518D1C840003B63C4 /* BoardList.m */,
+				DDF78BE618D1C840003B63C4 /* Classroom.h */,
+				DDF78BE718D1C840003B63C4 /* Classroom.m */,
+				DDF78BE818D1C840003B63C4 /* ClassroomList.h */,
+				DDF78BE918D1C840003B63C4 /* ClassroomList.m */,
+				DDF78BEA18D1C840003B63C4 /* Event.h */,
+				DDF78BEB18D1C840003B63C4 /* Event.m */,
+				DDF78BEC18D1C840003B63C4 /* EventList.h */,
+				DDF78BED18D1C840003B63C4 /* EventList.m */,
+				DDF78BEE18D1C840003B63C4 /* Folder.h */,
+				DDF78BEF18D1C840003B63C4 /* Folder.m */,
+				DDF78BF018D1C840003B63C4 /* FolderList.h */,
+				DDF78BF118D1C840003B63C4 /* FolderList.m */,
+				DDF78BF418D1C840003B63C4 /* Message.h */,
+				DDF78BF518D1C840003B63C4 /* Message.m */,
+				DDF78BF618D1C840003B63C4 /* MessageBody.h */,
+				DDF78BF718D1C840003B63C4 /* MessageBody.m */,
+				DDF78BF818D1C840003B63C4 /* MessageHistory.h */,
+				DDF78BF918D1C840003B63C4 /* MessageHistory.m */,
+				DDF78BFA18D1C840003B63C4 /* MessageHistoryDetail.h */,
+				DDF78BFB18D1C840003B63C4 /* MessageHistoryDetail.m */,
+				DDF78BFC18D1C840003B63C4 /* MessageList.h */,
+				DDF78BFD18D1C840003B63C4 /* MessageList.m */,
+				DDF78BFE18D1C840003B63C4 /* Person.h */,
+				DDF78BFF18D1C840003B63C4 /* Person.m */,
+				DDF78C0018D1C840003B63C4 /* PersonList.h */,
+				DDF78C0118D1C840003B63C4 /* PersonList.m */,
+				DDF78C0218D1C840003B63C4 /* Profile.h */,
+				DDF78C0318D1C840003B63C4 /* Profile.m */,
+				DDF78C0418D1C840003B63C4 /* ProfileList.h */,
+				DDF78C0518D1C840003B63C4 /* ProfileList.m */,
+				DDF78C0618D1C840003B63C4 /* Resource.h */,
+				DDF78C0718D1C840003B63C4 /* Resource.m */,
+				DDF78C0818D1C840003B63C4 /* ResourceList.h */,
+				DDF78C0918D1C840003B63C4 /* ResourceList.m */,
+				DDF78C0A18D1C840003B63C4 /* Setting.h */,
+				DDF78C0B18D1C840003B63C4 /* Setting.m */,
+				DDF78C0C18D1C840003B63C4 /* SettingList.h */,
+				DDF78C0D18D1C840003B63C4 /* SettingList.m */,
+				DDF78C0E18D1C840003B63C4 /* SettingValue.h */,
+				DDF78C0F18D1C840003B63C4 /* SettingValue.m */,
+				DDF78C1018D1C840003B63C4 /* Subject.h */,
+				DDF78C1118D1C840003B63C4 /* Subject.m */,
+				DDF78C1218D1C840003B63C4 /* SubjectList.h */,
+				DDF78C1318D1C840003B63C4 /* SubjectList.m */,
+				DDF78C1418D1C840003B63C4 /* TeachingMaterial.h */,
+				DDF78C1518D1C840003B63C4 /* TeachingMaterial.m */,
+				DDF78C1618D1C840003B63C4 /* TeachingMaterialList.h */,
+				DDF78C1718D1C840003B63C4 /* TeachingMaterialList.m */,
+				DDF78C1818D1C840003B63C4 /* User.h */,
+				DDF78C1918D1C840003B63C4 /* User.m */,
+				DDF78C1A18D1C840003B63C4 /* UserList.h */,
+				DDF78C1B18D1C840003B63C4 /* UserList.m */,
+			);
+			name = Llibreria;
+			sourceTree = "<group>";
+		};
+		DDF78C3918D1C8F3003B63C4 /* Exemple App i Crides Llibreria */ = {
+			isa = PBXGroup;
+			children = (
+				DDB8F75A18BFAAE2008E56A9 /* NextViewController.h */,
+				DDB8F75B18BFAAE2008E56A9 /* NextViewController.m */,
+				DDF78C3A18D1D1B5003B63C4 /* UserGetViewController.h */,
+				DDF78C3B18D1D1B5003B63C4 /* UserGetViewController.m */,
+				DDF78C3D18D1DEA7003B63C4 /* MailMessagesTableViewController.h */,
+				DDF78C3E18D1DEA7003B63C4 /* MailMessagesTableViewController.m */,
+			);
+			name = "Exemple App i Crides Llibreria";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDE72D3918AE15C7003DDF77 /* loginCampusAuthNZ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDE72D7218AE15C8003DDF77 /* Build configuration list for PBXNativeTarget "loginCampusAuthNZ" */;
+			buildPhases = (
+				DDE72D3618AE15C7003DDF77 /* Sources */,
+				DDE72D3718AE15C7003DDF77 /* Frameworks */,
+				DDE72D3818AE15C7003DDF77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = loginCampusAuthNZ;
+			productName = loginCampusAuthNZ;
+			productReference = DDE72D3A18AE15C7003DDF77 /* loginCampusAuthNZ.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDE72D3218AE15C7003DDF77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = UOC;
+			};
+			buildConfigurationList = DDE72D3518AE15C7003DDF77 /* Build configuration list for PBXProject "loginCampusAuthNZ" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DDE72D3118AE15C7003DDF77;
+			productRefGroup = DDE72D3B18AE15C7003DDF77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDE72D3918AE15C7003DDF77 /* loginCampusAuthNZ */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDE72D3818AE15C7003DDF77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDE1D40718B21AF200050737 /* webController.xib in Resources */,
+				DDE72D5418AE15C7003DDF77 /* Main_iPad.storyboard in Resources */,
+				DDE72D5C18AE15C7003DDF77 /* Images.xcassets in Resources */,
+				DDE1D40218B219A700050737 /* ipadWebLogin.xib in Resources */,
+				DDE72D5118AE15C7003DDF77 /* Main_iPhone.storyboard in Resources */,
+				DDE72D4818AE15C7003DDF77 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDE72D3618AE15C7003DDF77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDF78C2018D1C840003B63C4 /* Event.m in Sources */,
+				DDF78C3318D1C840003B63C4 /* Subject.m in Sources */,
+				DDE72D4E18AE15C7003DDF77 /* AppDelegate.m in Sources */,
+				DDF78C2A18D1C840003B63C4 /* Person.m in Sources */,
+				DDF78C3C18D1D1B5003B63C4 /* UserGetViewController.m in Sources */,
+				DDE5A87D18B4AF90007C0C39 /* authObj.m in Sources */,
+				DDF78C1C18D1C840003B63C4 /* Board.m in Sources */,
+				DDF78C2F18D1C840003B63C4 /* ResourceList.m in Sources */,
+				DDF78C1E18D1C840003B63C4 /* Classroom.m in Sources */,
+				DDF78C2218D1C840003B63C4 /* Folder.m in Sources */,
+				DDF78C2818D1C840003B63C4 /* MessageHistoryDetail.m in Sources */,
+				DDE72D7B18AE180C003DDF77 /* loginViewController.m in Sources */,
+				DDF78C2D18D1C840003B63C4 /* ProfileList.m in Sources */,
+				DDF78C2918D1C840003B63C4 /* MessageList.m in Sources */,
+				DDF78C3518D1C840003B63C4 /* TeachingMaterial.m in Sources */,
+				DDF78C3718D1C840003B63C4 /* User.m in Sources */,
+				DDF78C2318D1C840003B63C4 /* FolderList.m in Sources */,
+				DDF78C3218D1C840003B63C4 /* SettingValue.m in Sources */,
+				DDF78C3018D1C840003B63C4 /* Setting.m in Sources */,
+				DDF78C2718D1C840003B63C4 /* MessageHistory.m in Sources */,
+				DDF78C3818D1C840003B63C4 /* UserList.m in Sources */,
+				DDF78C2618D1C840003B63C4 /* MessageBody.m in Sources */,
+				DDE72D4A18AE15C7003DDF77 /* main.m in Sources */,
+				DDF78C3418D1C840003B63C4 /* SubjectList.m in Sources */,
+				DDB8F75C18BFAAE2008E56A9 /* NextViewController.m in Sources */,
+				DDF78C3618D1C840003B63C4 /* TeachingMaterialList.m in Sources */,
+				DDF78C2B18D1C840003B63C4 /* PersonList.m in Sources */,
+				DDE72D8218AE27AA003DDF77 /* navController.m in Sources */,
+				DDF78C3F18D1DEA7003B63C4 /* MailMessagesTableViewController.m in Sources */,
+				DDE1D40618B21AF200050737 /* webController.m in Sources */,
+				DDF78C2518D1C840003B63C4 /* Message.m in Sources */,
+				DDF78C2118D1C840003B63C4 /* EventList.m in Sources */,
+				DDF78C2C18D1C840003B63C4 /* Profile.m in Sources */,
+				DDF78C3118D1C840003B63C4 /* SettingList.m in Sources */,
+				DDF78C2E18D1C840003B63C4 /* Resource.m in Sources */,
+				DDF78C1D18D1C840003B63C4 /* BoardList.m in Sources */,
+				DDF78C1F18D1C840003B63C4 /* ClassroomList.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DDE72D4618AE15C7003DDF77 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDE72D4718AE15C7003DDF77 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DDE72D4F18AE15C7003DDF77 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDE72D5018AE15C7003DDF77 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		DDE72D5218AE15C7003DDF77 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDE72D5318AE15C7003DDF77 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DDE72D7018AE15C8003DDF77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DDE72D7118AE15C8003DDF77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DDE72D7318AE15C8003DDF77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "loginCampusAuthNZ/loginCampusAuthNZ-Prefix.pch";
+				INFOPLIST_FILE = "loginCampusAuthNZ/loginCampusAuthNZ-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DDE72D7418AE15C8003DDF77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "loginCampusAuthNZ/loginCampusAuthNZ-Prefix.pch";
+				INFOPLIST_FILE = "loginCampusAuthNZ/loginCampusAuthNZ-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DDE72D3518AE15C7003DDF77 /* Build configuration list for PBXProject "loginCampusAuthNZ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDE72D7018AE15C8003DDF77 /* Debug */,
+				DDE72D7118AE15C8003DDF77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDE72D7218AE15C8003DDF77 /* Build configuration list for PBXNativeTarget "loginCampusAuthNZ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDE72D7318AE15C8003DDF77 /* Debug */,
+				DDE72D7418AE15C8003DDF77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DDE72D3218AE15C7003DDF77 /* Project object */;
+}

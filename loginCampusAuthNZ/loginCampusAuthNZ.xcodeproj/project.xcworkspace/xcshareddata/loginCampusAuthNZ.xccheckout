@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D7A7AA31-9CEE-4ECE-A2F6-89F5E03B152F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>loginCampusAuthNZ</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6B072AC3-8F94-4325-B1CD-9F81697151AE</key>
+		<string>https://github.com/UOC/UOC-IOS-Libraries.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>loginCampusAuthNZ/loginCampusAuthNZ.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6B072AC3-8F94-4325-B1CD-9F81697151AE</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/UOC/UOC-IOS-Libraries.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6B072AC3-8F94-4325-B1CD-9F81697151AE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6B072AC3-8F94-4325-B1CD-9F81697151AE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UOC-IOS-Libraries</string>
+		</dict>
+	</array>
+</dict>
+</plist>

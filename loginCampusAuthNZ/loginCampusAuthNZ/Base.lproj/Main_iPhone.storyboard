@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Nav Controller-->
+        <scene sceneID="cUi-kZ-frf">
+            <objects>
+                <navigationController id="rS3-R9-Ivy" customClass="navController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yXu-0R-QUA">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="20k-Yu-I3U" kind="relationship" relationship="rootViewController" id="34r-gM-xiQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eq9-QA-ai8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="64"/>
+        </scene>
+        <!--Login View Controller - Campus UOC-->
+        <scene sceneID="6a8-jO-N3B">
+            <objects>
+                <viewController id="20k-Yu-I3U" customClass="loginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qOh-E7-EeG"/>
+                        <viewControllerLayoutGuide type="bottom" id="fhD-ju-Ftl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zt8-0F-onF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ql9-Yr-Ozk">
+                                <rect key="frame" x="141" y="269" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="login" destination="20k-Yu-I3U" eventType="touchUpInside" id="nbG-DN-FB4"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gmI-jM-HOA">
+                                <rect key="frame" x="150" y="307" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Ql9-Yr-Ozk" secondAttribute="centerX" id="9jg-I3-3Cu"/>
+                            <constraint firstAttribute="centerY" secondItem="Ql9-Yr-Ozk" secondAttribute="centerY" id="N3N-rL-nGw"/>
+                            <constraint firstItem="gmI-jM-HOA" firstAttribute="top" secondItem="Ql9-Yr-Ozk" secondAttribute="bottom" constant="8" id="Nrx-ZK-UmU"/>
+                            <constraint firstAttribute="centerX" secondItem="gmI-jM-HOA" secondAttribute="centerX" id="cRa-4w-rc8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Campus UOC" id="UXo-2q-HeT">
+                        <barButtonItem key="rightBarButtonItem" id="1VK-7r-YZm">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vY5-S1-DJY">
+                                <rect key="frame" x="233" y="5" width="71" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="esborra" destination="20k-Yu-I3U" eventType="touchUpInside" id="PP0-RF-BCo"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="loading" destination="gmI-jM-HOA" id="s42-ES-PdV"/>
+                        <outlet property="loginButton" destination="Ql9-Yr-Ozk" id="ysm-dj-1d7"/>
+                        <segue destination="CoM-ZM-Dy1" kind="push" identifier="fromLoginToNext" id="2t4-Ak-k1p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FkG-Mo-7FM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="585" y="67"/>
+        </scene>
+        <!--Next View Controller - NextView-->
+        <scene sceneID="cKM-8x-hie">
+            <objects>
+                <viewController storyboardIdentifier="nextView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CoM-ZM-Dy1" customClass="NextViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VDv-xJ-iqz"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Y0-a8-eQK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E3K-sa-xxa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="access_token" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlX-J2-odJ">
+                                <rect key="frame" x="20" y="84" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKw-Ma-QTm">
+                                <rect key="frame" x="100" y="128" width="121" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Exemple UserGet">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="anarUserGet" destination="CoM-ZM-Dy1" eventType="touchUpInside" id="iUz-gw-Bon"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wny-h2-ZjT">
+                                <rect key="frame" x="67" y="187" width="186" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Exemple MailMessagesGet">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="anarMailMessagesGet" destination="CoM-ZM-Dy1" eventType="touchUpInside" id="ZbJ-3I-Pme"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoM-U2-Se5">
+                                <rect key="frame" x="59" y="248" width="203" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Exemple CalendarEventsPost">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="anarCalendarEventsPost" destination="CoM-ZM-Dy1" eventType="touchUpInside" id="4qS-Hw-dTO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JlX-J2-odJ" secondAttribute="trailing" constant="20" id="1KD-4P-xHO"/>
+                            <constraint firstItem="JlX-J2-odJ" firstAttribute="leading" secondItem="E3K-sa-xxa" secondAttribute="leading" constant="20" id="48P-cr-uiM"/>
+                            <constraint firstItem="JlX-J2-odJ" firstAttribute="top" secondItem="VDv-xJ-iqz" secondAttribute="bottom" constant="20" id="4iq-Wk-gMU"/>
+                            <constraint firstItem="wny-h2-ZjT" firstAttribute="centerX" secondItem="CoM-U2-Se5" secondAttribute="centerX" id="GVq-fR-RY5"/>
+                            <constraint firstAttribute="centerX" secondItem="ZKw-Ma-QTm" secondAttribute="centerX" id="KSb-Hf-wm1"/>
+                            <constraint firstItem="ZKw-Ma-QTm" firstAttribute="top" secondItem="JlX-J2-odJ" secondAttribute="bottom" constant="23" id="TO3-1z-PWv"/>
+                            <constraint firstItem="CoM-U2-Se5" firstAttribute="top" secondItem="wny-h2-ZjT" secondAttribute="bottom" constant="31" id="bEl-LB-ckA"/>
+                            <constraint firstItem="wny-h2-ZjT" firstAttribute="top" secondItem="ZKw-Ma-QTm" secondAttribute="bottom" constant="29" id="pGe-6O-Yse"/>
+                            <constraint firstItem="wny-h2-ZjT" firstAttribute="centerX" secondItem="ZKw-Ma-QTm" secondAttribute="centerX" id="yKP-HK-e7p"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="NextView" id="4ar-CC-j1v"/>
+                    <connections>
+                        <outlet property="gotoCalendarEventsPost" destination="CoM-U2-Se5" id="nfG-OK-yE0"/>
+                        <outlet property="gotoMailMessagesGet" destination="wny-h2-ZjT" id="olD-Jj-9Zg"/>
+                        <outlet property="gotoUserGet" destination="ZKw-Ma-QTm" id="4Sp-hE-t8J"/>
+                        <outlet property="tokenActual" destination="JlX-J2-odJ" id="v4Z-Ou-L8E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zQc-LV-YeN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983" y="64"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
