@@ -36,7 +36,7 @@
 
 - (void) mostraAccessToken
 {
-    [self.tokenActual setText:self.auth.accessToken];
+    [self.tokenActual setText:[NSString stringWithFormat:@"access_token = %@",self.auth.accessToken]];
 }
 
 - (IBAction)anarUserGet
@@ -55,7 +55,9 @@
 
 - (IBAction)anarCalendarEventsPost
 {
-    
+    CalendarEventsPostTableViewController *ceTViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"calendarEvents"];
+    ceTViewController.auth = self.auth;
+    [self.navigationController pushViewController:ceTViewController animated:NO];
 }
 
 @end

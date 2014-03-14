@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD053F0C18D2F46A00143158 /* CalendarEventsPostTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD053F0B18D2F46A00143158 /* CalendarEventsPostTableViewController.m */; };
 		DDB8F75C18BFAAE2008E56A9 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB8F75B18BFAAE2008E56A9 /* NextViewController.m */; };
 		DDE1D40218B219A700050737 /* ipadWebLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDE1D40118B219A700050737 /* ipadWebLogin.xib */; };
 		DDE1D40618B21AF200050737 /* webController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE1D40418B21AF200050737 /* webController.m */; };
@@ -58,6 +59,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD053F0A18D2F46A00143158 /* CalendarEventsPostTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarEventsPostTableViewController.h; sourceTree = "<group>"; };
+		DD053F0B18D2F46A00143158 /* CalendarEventsPostTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarEventsPostTableViewController.m; sourceTree = "<group>"; };
 		DDB8F75A18BFAAE2008E56A9 /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
 		DDB8F75B18BFAAE2008E56A9 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		DDE1D40118B219A700050737 /* ipadWebLogin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ipadWebLogin.xib; sourceTree = "<group>"; };
@@ -304,6 +307,8 @@
 				DDF78C3B18D1D1B5003B63C4 /* UserGetViewController.m */,
 				DDF78C3D18D1DEA7003B63C4 /* MailMessagesTableViewController.h */,
 				DDF78C3E18D1DEA7003B63C4 /* MailMessagesTableViewController.m */,
+				DD053F0A18D2F46A00143158 /* CalendarEventsPostTableViewController.h */,
+				DD053F0B18D2F46A00143158 /* CalendarEventsPostTableViewController.m */,
 			);
 			name = "Exemple App i Crides Llibreria";
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 				DDF78C3318D1C840003B63C4 /* Subject.m in Sources */,
 				DDE72D4E18AE15C7003DDF77 /* AppDelegate.m in Sources */,
 				DDF78C2A18D1C840003B63C4 /* Person.m in Sources */,
+				DD053F0C18D2F46A00143158 /* CalendarEventsPostTableViewController.m in Sources */,
 				DDF78C3C18D1D1B5003B63C4 /* UserGetViewController.m in Sources */,
 				DDE5A87D18B4AF90007C0C39 /* authObj.m in Sources */,
 				DDF78C1C18D1C840003B63C4 /* Board.m in Sources */,
