@@ -9,9 +9,9 @@ UOC-IOS-Libraries
 
 This iOS library contains the login functions for UOC Campus and the calls to the OpenAPI.
 
-#ToDo
+## ToDo
 
-Add mobileResources to the Library
+Document How to use
 
 ## More Information
 

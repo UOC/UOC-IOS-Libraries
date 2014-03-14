@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DD053F0C18D2F46A00143158 /* CalendarEventsPostTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD053F0B18D2F46A00143158 /* CalendarEventsPostTableViewController.m */; };
+		DD053F0F18D3139200143158 /* MobileResourceList.m in Sources */ = {isa = PBXBuildFile; fileRef = DD053F0E18D3139200143158 /* MobileResourceList.m */; };
+		DD053F1218D3140400143158 /* MobileResource.m in Sources */ = {isa = PBXBuildFile; fileRef = DD053F1118D3140400143158 /* MobileResource.m */; };
 		DDB8F75C18BFAAE2008E56A9 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB8F75B18BFAAE2008E56A9 /* NextViewController.m */; };
 		DDE1D40218B219A700050737 /* ipadWebLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDE1D40118B219A700050737 /* ipadWebLogin.xib */; };
 		DDE1D40618B21AF200050737 /* webController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE1D40418B21AF200050737 /* webController.m */; };
@@ -61,6 +63,10 @@
 /* Begin PBXFileReference section */
 		DD053F0A18D2F46A00143158 /* CalendarEventsPostTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarEventsPostTableViewController.h; sourceTree = "<group>"; };
 		DD053F0B18D2F46A00143158 /* CalendarEventsPostTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarEventsPostTableViewController.m; sourceTree = "<group>"; };
+		DD053F0D18D3139200143158 /* MobileResourceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileResourceList.h; sourceTree = "<group>"; };
+		DD053F0E18D3139200143158 /* MobileResourceList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileResourceList.m; sourceTree = "<group>"; };
+		DD053F1018D3140400143158 /* MobileResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileResource.h; sourceTree = "<group>"; };
+		DD053F1118D3140400143158 /* MobileResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileResource.m; sourceTree = "<group>"; };
 		DDB8F75A18BFAAE2008E56A9 /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
 		DDB8F75B18BFAAE2008E56A9 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		DDE1D40118B219A700050737 /* ipadWebLogin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ipadWebLogin.xib; sourceTree = "<group>"; };
@@ -264,6 +270,10 @@
 				DDF78BFB18D1C840003B63C4 /* MessageHistoryDetail.m */,
 				DDF78BFC18D1C840003B63C4 /* MessageList.h */,
 				DDF78BFD18D1C840003B63C4 /* MessageList.m */,
+				DD053F1018D3140400143158 /* MobileResource.h */,
+				DD053F1118D3140400143158 /* MobileResource.m */,
+				DD053F0D18D3139200143158 /* MobileResourceList.h */,
+				DD053F0E18D3139200143158 /* MobileResourceList.m */,
 				DDF78BFE18D1C840003B63C4 /* Person.h */,
 				DDF78BFF18D1C840003B63C4 /* Person.m */,
 				DDF78C0018D1C840003B63C4 /* PersonList.h */,
@@ -341,6 +351,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = UOC;
+				TargetAttributes = {
+					DDE72D3918AE15C7003DDF77 = {
+						DevelopmentTeam = P426M5SKYQ;
+					};
+				};
 			};
 			buildConfigurationList = DDE72D3518AE15C7003DDF77 /* Build configuration list for PBXProject "loginCampusAuthNZ" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -404,9 +419,11 @@
 				DDF78C2718D1C840003B63C4 /* MessageHistory.m in Sources */,
 				DDF78C3818D1C840003B63C4 /* UserList.m in Sources */,
 				DDF78C2618D1C840003B63C4 /* MessageBody.m in Sources */,
+				DD053F0F18D3139200143158 /* MobileResourceList.m in Sources */,
 				DDE72D4A18AE15C7003DDF77 /* main.m in Sources */,
 				DDF78C3418D1C840003B63C4 /* SubjectList.m in Sources */,
 				DDB8F75C18BFAAE2008E56A9 /* NextViewController.m in Sources */,
+				DD053F1218D3140400143158 /* MobileResource.m in Sources */,
 				DDF78C3618D1C840003B63C4 /* TeachingMaterialList.m in Sources */,
 				DDF78C2B18D1C840003B63C4 /* PersonList.m in Sources */,
 				DDE72D8218AE27AA003DDF77 /* navController.m in Sources */,
@@ -532,6 +549,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "loginCampusAuthNZ/loginCampusAuthNZ-Prefix.pch";
 				INFOPLIST_FILE = "loginCampusAuthNZ/loginCampusAuthNZ-Info.plist";
@@ -540,6 +559,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -549,6 +569,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "loginCampusAuthNZ/loginCampusAuthNZ-Prefix.pch";
 				INFOPLIST_FILE = "loginCampusAuthNZ/loginCampusAuthNZ-Info.plist";
@@ -558,6 +580,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
