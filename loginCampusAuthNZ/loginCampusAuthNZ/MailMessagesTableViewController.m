@@ -76,10 +76,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //HistoryViewController *messageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"historyView"];
-   // messageViewController.idMessage = [[self.messages objectAtIndex:indexPath.row] identifier];
-    //messageViewController.auth = self.auth;
-    //[self.navigationController pushViewController:messageViewController animated:YES];
+    
 }
 
 - (void)cargarMessages

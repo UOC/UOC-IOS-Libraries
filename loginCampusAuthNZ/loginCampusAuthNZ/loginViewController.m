@@ -105,11 +105,13 @@
 }
 
 
+
+// Aquesta es una funcio que cal modificar
 -(void) goToNextView
 {
     NSUserDefaults *stdDefaults = [NSUserDefaults standardUserDefaults];
     [stdDefaults removeObjectForKey:@"nextView"];
-     // Canviar aquest controlador pel primer controlador de la seva app
+     // Canvieu aquest controlador pel primer controlador de la vostra app
     NextViewController *nextView = [self.storyboard instantiateViewControllerWithIdentifier:@"nextView"];
     nextView.auth = self.auth;
     [self.navigationController pushViewController:nextView animated:YES];
@@ -162,18 +164,6 @@
             });
         });
         
-        /*
-        if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
-            self.viewController = [[webController alloc] initWithNibName:@"ipadWebLogin" bundle:nil];
-            self.viewController.extra = [[NSString stringWithFormat:@"device=%@&", [[UIDevice currentDevice] name]] stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
-            [[self navigationController] pushViewController:self.viewController animated:YES];
-        }
-        else {
-            self.viewController = [[webController alloc] initWithNibName:@"webController" bundle:nil];
-            self.viewController.extra = [[NSString stringWithFormat:@"device=%@&", [[UIDevice currentDevice] name]] stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
-            [[self navigationController] pushViewController:self.viewController animated:YES];
-        }
-         */
     }
 }
 
