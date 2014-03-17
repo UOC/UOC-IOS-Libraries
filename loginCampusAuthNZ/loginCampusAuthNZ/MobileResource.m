@@ -39,14 +39,16 @@
     
     NSData *resourceData = [NSData dataWithContentsOfURL:resourceURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:resourceData encoding:NSUTF8StringEncoding]);
-    NSDictionary *resourceDict = [NSJSONSerialization JSONObjectWithData:resourceData options:0 error:nil];
-    
-    if ([resourceDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [resourceDict valueForKey:@"error"], [resourceDict valueForKey:@"error_description"]);
-        return r;
+    if(resourceData != nil){
+        NSDictionary *resourceDict = [NSJSONSerialization JSONObjectWithData:resourceData options:0 error:nil];
+        
+        if ([resourceDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [resourceDict valueForKey:@"error"], [resourceDict valueForKey:@"error_description"]);
+            return r;
+        }
+        
+        [r setDatos:resourceDict];
     }
-    
-    [r setDatos:resourceDict];
     
     return r;
 }
@@ -61,14 +63,16 @@
     
     NSData *resourceData = [NSData dataWithContentsOfURL:resourceURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:resourceData encoding:NSUTF8StringEncoding]);
-    NSDictionary *resourceDict = [NSJSONSerialization JSONObjectWithData:resourceData options:0 error:nil];
-    
-    if ([resourceDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [resourceDict valueForKey:@"error"], [resourceDict valueForKey:@"error_description"]);
-        return r;
+    if(resourceData != nil){
+        NSDictionary *resourceDict = [NSJSONSerialization JSONObjectWithData:resourceData options:0 error:nil];
+        
+        if ([resourceDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [resourceDict valueForKey:@"error"], [resourceDict valueForKey:@"error_description"]);
+            return r;
+        }
+        
+        [r setDatos:resourceDict];
     }
-    
-    [r setDatos:resourceDict];
     
     return r;
 }

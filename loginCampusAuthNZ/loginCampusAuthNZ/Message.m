@@ -44,15 +44,17 @@
     
     NSData *messageData = [NSData dataWithContentsOfURL:messageURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:messageData encoding:NSUTF8StringEncoding]);
-    NSDictionary *messageDict = [NSJSONSerialization JSONObjectWithData:messageData options:0 error:nil];
-    
-    if ([messageDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [messageDict valueForKey:@"error"], [messageDict valueForKey:@"error_description"]);
-        return m;
+    if(messageData != nil){
+        NSDictionary *messageDict = [NSJSONSerialization JSONObjectWithData:messageData options:0 error:nil];
+        
+        if ([messageDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [messageDict valueForKey:@"error"], [messageDict valueForKey:@"error_description"]);
+            return m;
+        }
+        
+        [m setDatos:messageDict];
+
     }
-    
-    [m setDatos:messageDict];
-    
     return m;
 }
 
@@ -77,14 +79,17 @@
     
     NSData *messageData = [NSData dataWithContentsOfURL:messageURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:messageData encoding:NSUTF8StringEncoding]);
-    NSDictionary *messageDict = [NSJSONSerialization JSONObjectWithData:messageData options:0 error:nil];
-    
-    if ([messageDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [messageDict valueForKey:@"error"], [messageDict valueForKey:@"error_description"]);
-        return m;
+    if(messageData != nil){
+        NSDictionary *messageDict = [NSJSONSerialization JSONObjectWithData:messageData options:0 error:nil];
+        
+        if ([messageDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [messageDict valueForKey:@"error"], [messageDict valueForKey:@"error_description"]);
+            return m;
+        }
+        
+        [m setDatos:messageDict];
+        
     }
-    
-    [m setDatos:messageDict];
     
     return m;
 }
@@ -107,14 +112,17 @@
     
     NSData *messageData = [NSData dataWithContentsOfURL:messageURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:messageData encoding:NSUTF8StringEncoding]);
-    NSDictionary *messageDict = [NSJSONSerialization JSONObjectWithData:messageData options:0 error:nil];
-    
-    if ([messageDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [messageDict valueForKey:@"error"], [messageDict valueForKey:@"error_description"]);
-        return m;
+    if(messageData != nil){
+        NSDictionary *messageDict = [NSJSONSerialization JSONObjectWithData:messageData options:0 error:nil];
+        
+        if ([messageDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [messageDict valueForKey:@"error"], [messageDict valueForKey:@"error_description"]);
+            return m;
+        }
+        
+        [m setDatos:messageDict];
+        
     }
-    
-    [m setDatos:messageDict];
     
     return m;
 }
@@ -139,14 +147,17 @@
     
     NSData *messageData = [NSData dataWithContentsOfURL:messageURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:messageData encoding:NSUTF8StringEncoding]);
-    NSDictionary *messageDict = [NSJSONSerialization JSONObjectWithData:messageData options:0 error:nil];
-    
-    if ([messageDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [messageDict valueForKey:@"error"], [messageDict valueForKey:@"error_description"]);
-        return m;
+    if(messageData != nil){
+        NSDictionary *messageDict = [NSJSONSerialization JSONObjectWithData:messageData options:0 error:nil];
+        
+        if ([messageDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [messageDict valueForKey:@"error"], [messageDict valueForKey:@"error_description"]);
+            return m;
+        }
+        
+        [m setDatos:messageDict];
+        
     }
-    
-    [m setDatos:messageDict];
     
     return m;
 }
@@ -172,14 +183,17 @@
     
     NSData *messageData = [NSData dataWithContentsOfURL:messageURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:messageData encoding:NSUTF8StringEncoding]);
-    NSDictionary *messageDict = [NSJSONSerialization JSONObjectWithData:messageData options:0 error:nil];
-    
-    if ([messageDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [messageDict valueForKey:@"error"], [messageDict valueForKey:@"error_description"]);
-        return m;
+    if(messageData != nil){
+        NSDictionary *messageDict = [NSJSONSerialization JSONObjectWithData:messageData options:0 error:nil];
+        
+        if ([messageDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [messageDict valueForKey:@"error"], [messageDict valueForKey:@"error_description"]);
+            return m;
+        }
+        
+        [m setDatos:messageDict];
+        
     }
-    
-    [m setDatos:messageDict];
     
     return m;
 }
@@ -216,15 +230,18 @@
     NSData *data = [NSURLConnection sendSynchronousRequest:request
                                          returningResponse:&response
                                                      error:&error];
-    NSDictionary *messageDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    
-    if ([messageDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [messageDict valueForKey:@"error"], [messageDict valueForKey:@"error_description"]);
-        return m;
+    if(data != nil){
+        NSDictionary *messageDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        
+        if ([messageDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [messageDict valueForKey:@"error"], [messageDict valueForKey:@"error_description"]);
+            return m;
+        }
+        
+        // Afegim els valors que ens ha tornat en un missatge que retornem.
+        [m setDatos:messageDict];
+
     }
-    
-    // Afegim els valors que ens ha tornat en un missatge que retornem.
-    [m setDatos:messageDict];
     
     return m;
     
@@ -260,15 +277,18 @@
     NSData *data = [NSURLConnection sendSynchronousRequest:request
                                          returningResponse:&response
                                                      error:&error];
-    NSDictionary *messageDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    
-    if ([messageDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [messageDict valueForKey:@"error"], [messageDict valueForKey:@"error_description"]);
-        return m;
+    if(data != nil){
+        NSDictionary *messageDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        
+        if ([messageDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [messageDict valueForKey:@"error"], [messageDict valueForKey:@"error_description"]);
+            return m;
+        }
+        
+        // Afegim els valors que ens ha tornat en un missatge que retornem.
+        [m setDatos:messageDict];
+        
     }
-    
-    // Afegim els valors que ens ha tornat en un missatge que retornem.
-    [m setDatos:messageDict];
     
     return m;
 }
@@ -305,15 +325,18 @@
     NSData *data = [NSURLConnection sendSynchronousRequest:request
                                          returningResponse:&response
                                                      error:&error];
-    NSDictionary *messageDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    
-    if ([messageDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [messageDict valueForKey:@"error"], [messageDict valueForKey:@"error_description"]);
-        return m;
+    if(data != nil){
+        NSDictionary *messageDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        
+        if ([messageDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [messageDict valueForKey:@"error"], [messageDict valueForKey:@"error_description"]);
+            return m;
+        }
+        
+        // Afegim els valors que ens ha tornat en un missatge que retornem.
+        [m setDatos:messageDict];
+        
     }
-    
-    // Afegim els valors que ens ha tornat en un missatge que retornem.
-    [m setDatos:messageDict];
     
     return m;
 }

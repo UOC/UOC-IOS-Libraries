@@ -56,14 +56,16 @@
     
     NSData *personData = [NSData dataWithContentsOfURL:personURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:personData encoding:NSUTF8StringEncoding]);
-    NSDictionary *personDict = [NSJSONSerialization JSONObjectWithData:personData options:0 error:nil];
-    
-    if ([personDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [personDict valueForKey:@"error"], [personDict valueForKey:@"error_description"]);
-        return p;
+    if(personData != nil){
+        NSDictionary *personDict = [NSJSONSerialization JSONObjectWithData:personData options:0 error:nil];
+        
+        if ([personDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [personDict valueForKey:@"error"], [personDict valueForKey:@"error_description"]);
+            return p;
+        }
+        
+        [p setDatos:personDict];
     }
-    
-    [p setDatos:personDict];
     
     return p;
 }

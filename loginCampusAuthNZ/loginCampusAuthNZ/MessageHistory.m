@@ -41,14 +41,16 @@
     
     NSData *messagehistoryData = [NSData dataWithContentsOfURL:messagehistoryURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:messagehistoryData encoding:NSUTF8StringEncoding]);
-    NSDictionary *messagehistoryDict = [NSJSONSerialization JSONObjectWithData:messagehistoryData options:0 error:nil];
-    
-    if ([messagehistoryDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [messagehistoryDict valueForKey:@"error"], [messagehistoryDict valueForKey:@"error_description"]);
-        return h;
+    if(messagehistoryData != nil){
+        NSDictionary *messagehistoryDict = [NSJSONSerialization JSONObjectWithData:messagehistoryData options:0 error:nil];
+        
+        if ([messagehistoryDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [messagehistoryDict valueForKey:@"error"], [messagehistoryDict valueForKey:@"error_description"]);
+            return h;
+        }
+        
+        [h setDatos:messagehistoryDict];
     }
-    
-    [h setDatos:messagehistoryDict];
     return h;
 }
 
@@ -68,14 +70,16 @@
     
     NSData *messagehistoryData = [NSData dataWithContentsOfURL:messagehistoryURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:messagehistoryData encoding:NSUTF8StringEncoding]);
-    NSDictionary *messagehistoryDict = [NSJSONSerialization JSONObjectWithData:messagehistoryData options:0 error:nil];
-    
-    if ([messagehistoryDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [messagehistoryDict valueForKey:@"error"], [messagehistoryDict valueForKey:@"error_description"]);
-        return h;
+    if(messagehistoryData != nil){
+        NSDictionary *messagehistoryDict = [NSJSONSerialization JSONObjectWithData:messagehistoryData options:0 error:nil];
+        
+        if ([messagehistoryDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [messagehistoryDict valueForKey:@"error"], [messagehistoryDict valueForKey:@"error_description"]);
+            return h;
+        }
+        
+        [h setDatos:messagehistoryDict];
     }
-    
-    [h setDatos:messagehistoryDict];
     return h;
 
 }
@@ -99,14 +103,16 @@
     
     NSData *messagehistoryData = [NSData dataWithContentsOfURL:messagehistoryURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:messagehistoryData encoding:NSUTF8StringEncoding]);
-    NSDictionary *messagehistoryDict = [NSJSONSerialization JSONObjectWithData:messagehistoryData options:0 error:nil];
-    
-    if ([messagehistoryDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [messagehistoryDict valueForKey:@"error"], [messagehistoryDict valueForKey:@"error_description"]);
-        return h;
+    if(messagehistoryData != nil){
+        NSDictionary *messagehistoryDict = [NSJSONSerialization JSONObjectWithData:messagehistoryData options:0 error:nil];
+        
+        if ([messagehistoryDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [messagehistoryDict valueForKey:@"error"], [messagehistoryDict valueForKey:@"error_description"]);
+            return h;
+        }
+        
+        [h setDatos:messagehistoryDict];
     }
-    
-    [h setDatos:messagehistoryDict];
     return h;
 }
 

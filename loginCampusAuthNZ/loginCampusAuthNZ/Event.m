@@ -48,14 +48,16 @@
     
     NSData *eventData = [NSData dataWithContentsOfURL:eventURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:eventData encoding:NSUTF8StringEncoding]);
-    NSDictionary *eventDict = [NSJSONSerialization JSONObjectWithData:eventData options:0 error:nil];
+    if(eventData != nil) {
+        NSDictionary *eventDict = [NSJSONSerialization JSONObjectWithData:eventData options:0 error:nil];
         
-    if ([eventDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [eventDict valueForKey:@"error"], [eventDict valueForKey:@"error_description"]);
-        return e;
+        if ([eventDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [eventDict valueForKey:@"error"], [eventDict valueForKey:@"error_description"]);
+            return e;
+        }
+        
+        [e setDatos:eventDict];
     }
-        
-    [e setDatos:eventDict];
    
     return e;
 }
@@ -94,15 +96,17 @@
                                          returningResponse:&response
                                                      error:&error];
     Event *e = [[Event alloc] init];
-    NSDictionary *eventDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    
-    if ([eventDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [eventDict valueForKey:@"error"], [eventDict valueForKey:@"error_description"]);
-        return e;
+    if(data != nil){
+        NSDictionary *eventDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        
+        if ([eventDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [eventDict valueForKey:@"error"], [eventDict valueForKey:@"error_description"]);
+            return e;
+        }
+        
+        // Afegim els valors que ens ha tornat en un event que retornem.
+        [e setDatos:eventDict];
     }
-    
-    // Afegim els valors que ens ha tornat en un event que retornem.
-    [e setDatos:eventDict];
     return e;
 }
 

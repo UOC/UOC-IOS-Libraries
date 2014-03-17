@@ -126,14 +126,26 @@
                                     <action selector="anarCalendarEventsPost" destination="Fp2-gU-1i8" eventType="touchUpInside" id="A3g-sh-Anf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cah-Ct-3g5">
+                                <rect key="frame" x="281" y="481" width="207" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Exemple MobileResourcesGet">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="anarMobileResourcesGet" destination="Fp2-gU-1i8" eventType="touchUpInside" id="SbB-Bm-6Ok"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="KGV-Yl-tjr" firstAttribute="leading" secondItem="Nu1-Hp-uyG" secondAttribute="leading" constant="20" id="3lQ-3o-nw6"/>
                             <constraint firstItem="zel-QX-a6y" firstAttribute="top" secondItem="KGV-Yl-tjr" secondAttribute="bottom" constant="101" id="FxG-47-nU9"/>
+                            <constraint firstItem="cah-Ct-3g5" firstAttribute="top" secondItem="Tsj-Qw-LWV" secondAttribute="bottom" constant="52" id="Nr0-ce-cKS"/>
                             <constraint firstItem="tUi-YO-3BL" firstAttribute="top" secondItem="zel-QX-a6y" secondAttribute="bottom" constant="70" id="T50-Dv-0i8"/>
                             <constraint firstAttribute="centerX" secondItem="zel-QX-a6y" secondAttribute="centerX" id="VVE-G5-8Zo"/>
                             <constraint firstItem="Tsj-Qw-LWV" firstAttribute="centerX" secondItem="tUi-YO-3BL" secondAttribute="centerX" id="YQc-iF-dOw"/>
+                            <constraint firstItem="Tsj-Qw-LWV" firstAttribute="centerX" secondItem="cah-Ct-3g5" secondAttribute="centerX" constant="0.5" id="iUS-0f-grf"/>
                             <constraint firstItem="tUi-YO-3BL" firstAttribute="centerX" secondItem="zel-QX-a6y" secondAttribute="centerX" id="jnP-oM-hvv"/>
                             <constraint firstItem="KGV-Yl-tjr" firstAttribute="top" secondItem="BpK-OQ-Hxx" secondAttribute="bottom" constant="20" id="mf7-Uv-ejb"/>
                             <constraint firstItem="Tsj-Qw-LWV" firstAttribute="top" secondItem="tUi-YO-3BL" secondAttribute="bottom" constant="63" id="nvS-FT-Y18"/>
@@ -144,11 +156,13 @@
                     <connections>
                         <outlet property="gotoCalendarEventsPost" destination="Tsj-Qw-LWV" id="Bif-38-95K"/>
                         <outlet property="gotoMailMessagesGet" destination="tUi-YO-3BL" id="UQb-pq-H0Q"/>
+                        <outlet property="gotoMobileResourcesGet" destination="cah-Ct-3g5" id="bX2-4N-LSk"/>
                         <outlet property="gotoUserGet" destination="zel-QX-a6y" id="qRV-Xi-eFt"/>
                         <outlet property="tokenActual" destination="KGV-Yl-tjr" id="7W6-3d-yDd"/>
                         <segue destination="KCz-Kr-OcI" kind="push" id="Fmk-7F-tiC"/>
                         <segue destination="Sv5-qb-iPT" kind="push" id="Zgu-HA-OET"/>
                         <segue destination="kFn-y3-zNF" kind="push" id="g7m-Db-47Y"/>
+                        <segue destination="KIR-K2-uSU" kind="push" id="myy-rx-qvw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SkD-dL-grm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -335,6 +349,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjz-lg-tw5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2409" y="1693"/>
+        </scene>
+        <!--Mobile Resources Table View Controller - MobileResourcesGet-->
+        <scene sceneID="S3t-XR-8BN">
+            <objects>
+                <tableViewController storyboardIdentifier="mobileResources" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KIR-K2-uSU" customClass="MobileResourcesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="RAN-So-5xu">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="resource" id="uwP-V4-DoG">
+                                <rect key="frame" x="0.0" y="119" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uwP-V4-DoG" id="FgB-2x-eFQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="KIR-K2-uSU" id="9XB-gU-3ph"/>
+                            <outlet property="delegate" destination="KIR-K2-uSU" id="4fW-9B-bgK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="MobileResourcesGet" id="YTQ-hS-4mQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q4F-9y-ruN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2395" y="3218"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -35,14 +35,16 @@
 
     NSData *messagebodyData = [NSData dataWithContentsOfURL:messagebodyURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:messagebodyData encoding:NSUTF8StringEncoding]);
-    NSDictionary *messagebodyDict = [NSJSONSerialization JSONObjectWithData:messagebodyData options:0 error:nil];
-    
-    if ([messagebodyDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [messagebodyDict valueForKey:@"error"], [messagebodyDict valueForKey:@"error_description"]);
-        return b;
+    if(messagebodyData != nil){
+        NSDictionary *messagebodyDict = [NSJSONSerialization JSONObjectWithData:messagebodyData options:0 error:nil];
+        
+        if ([messagebodyDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [messagebodyDict valueForKey:@"error"], [messagebodyDict valueForKey:@"error_description"]);
+            return b;
+        }
+        
+        [b setDatos:messagebodyDict];
     }
-    
-    [b setDatos:messagebodyDict];
     return b;
 }
 
@@ -62,14 +64,16 @@
     
     NSData *messagebodyData = [NSData dataWithContentsOfURL:messagebodyURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:messagebodyData encoding:NSUTF8StringEncoding]);
-    NSDictionary *messagebodyDict = [NSJSONSerialization JSONObjectWithData:messagebodyData options:0 error:nil];
-    
-    if ([messagebodyDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [messagebodyDict valueForKey:@"error"], [messagebodyDict valueForKey:@"error_description"]);
-        return b;
+    if(messagebodyData != nil){
+        NSDictionary *messagebodyDict = [NSJSONSerialization JSONObjectWithData:messagebodyData options:0 error:nil];
+        
+        if ([messagebodyDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [messagebodyDict valueForKey:@"error"], [messagebodyDict valueForKey:@"error_description"]);
+            return b;
+        }
+        
+        [b setDatos:messagebodyDict];
     }
-    
-    [b setDatos:messagebodyDict];
     return b;
 }
 
@@ -92,14 +96,16 @@
     
     NSData *messagebodyData = [NSData dataWithContentsOfURL:messagebodyURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:messagebodyData encoding:NSUTF8StringEncoding]);
-    NSDictionary *messagebodyDict = [NSJSONSerialization JSONObjectWithData:messagebodyData options:0 error:nil];
-    
-    if ([messagebodyDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [messagebodyDict valueForKey:@"error"], [messagebodyDict valueForKey:@"error_description"]);
-        return b;
+    if(messagebodyData != nil){
+        NSDictionary *messagebodyDict = [NSJSONSerialization JSONObjectWithData:messagebodyData options:0 error:nil];
+        
+        if ([messagebodyDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [messagebodyDict valueForKey:@"error"], [messagebodyDict valueForKey:@"error_description"]);
+            return b;
+        }
+        
+        [b setDatos:messagebodyDict];
     }
-    
-    [b setDatos:messagebodyDict];
     return b;
 }
 @end

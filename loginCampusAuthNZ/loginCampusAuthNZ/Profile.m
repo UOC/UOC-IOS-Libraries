@@ -40,14 +40,16 @@
     
     NSData *profileData = [NSData dataWithContentsOfURL:profileURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:profileData encoding:NSUTF8StringEncoding]);
-    NSDictionary *profileDict = [NSJSONSerialization JSONObjectWithData:profileData options:0 error:nil];
-    
-    if ([profileDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [profileDict valueForKey:@"error"], [profileDict valueForKey:@"error_description"]);
-        return p;
+    if(profileData != nil){
+        NSDictionary *profileDict = [NSJSONSerialization JSONObjectWithData:profileData options:0 error:nil];
+        
+        if ([profileDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [profileDict valueForKey:@"error"], [profileDict valueForKey:@"error_description"]);
+            return p;
+        }
+        
+        [p setDatos:profileDict];
     }
-    
-    [p setDatos:profileDict];
     
     return p;
 }
@@ -69,14 +71,16 @@
     
     NSData *profileData = [NSData dataWithContentsOfURL:profileURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:profileData encoding:NSUTF8StringEncoding]);
-    NSDictionary *profileDict = [NSJSONSerialization JSONObjectWithData:profileData options:0 error:nil];
-    
-    if ([profileDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [profileDict valueForKey:@"error"], [profileDict valueForKey:@"error_description"]);
-        return p;
+    if(profileData != nil){
+        NSDictionary *profileDict = [NSJSONSerialization JSONObjectWithData:profileData options:0 error:nil];
+        
+        if ([profileDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [profileDict valueForKey:@"error"], [profileDict valueForKey:@"error_description"]);
+            return p;
+        }
+        
+        [p setDatos:profileDict];
     }
-    
-    [p setDatos:profileDict];
     
     return p;
 }
@@ -112,15 +116,17 @@
                                          returningResponse:&response
                                                      error:&error];
     Profile *p = [[Profile alloc] init];
-    NSDictionary *profileDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    
-    if ([profileDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [profileDict valueForKey:@"error"], [profileDict valueForKey:@"error_description"]);
-        return p;
+    if(data != nil){
+        NSDictionary *profileDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        
+        if ([profileDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [profileDict valueForKey:@"error"], [profileDict valueForKey:@"error_description"]);
+            return p;
+        }
+        
+        // Afegim els valors que ens ha tornat en un perfil que retornem.
+        [p setDatos:profileDict];
     }
-    
-    // Afegim els valors que ens ha tornat en un perfil que retornem.
-    [p setDatos:profileDict];
     return p;
 }
 @end

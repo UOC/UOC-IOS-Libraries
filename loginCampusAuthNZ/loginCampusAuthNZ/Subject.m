@@ -39,14 +39,16 @@
     
     NSData *subjectData = [NSData dataWithContentsOfURL:subjectURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:subjectData encoding:NSUTF8StringEncoding]);
-    NSDictionary *subjectDict = [NSJSONSerialization JSONObjectWithData:subjectData options:0 error:nil];
-    
-    if ([subjectDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [subjectDict valueForKey:@"error"], [subjectDict valueForKey:@"error_description"]);
-        return s;
+    if(subjectData != nil){
+        NSDictionary *subjectDict = [NSJSONSerialization JSONObjectWithData:subjectData options:0 error:nil];
+        
+        if ([subjectDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [subjectDict valueForKey:@"error"], [subjectDict valueForKey:@"error_description"]);
+            return s;
+        }
+        
+        [s setDatos:subjectDict];
     }
-    
-    [s setDatos:subjectDict];
     
     return s;
 }

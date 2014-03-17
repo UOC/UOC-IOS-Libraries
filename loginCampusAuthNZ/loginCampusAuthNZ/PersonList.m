@@ -35,14 +35,16 @@
     
     NSData *peopleData = [NSData dataWithContentsOfURL:peopleURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:peopleData encoding:NSUTF8StringEncoding]);
-    NSDictionary *peopleDict = [NSJSONSerialization JSONObjectWithData:peopleData options:0 error:nil];
-    
-    if ([peopleDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [peopleDict valueForKey:@"error"], [peopleDict valueForKey:@"error_description"]);
-        return self.people;
+    if(peopleData != nil) {
+        NSDictionary *peopleDict = [NSJSONSerialization JSONObjectWithData:peopleData options:0 error:nil];
+        
+        if ([peopleDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [peopleDict valueForKey:@"error"], [peopleDict valueForKey:@"error_description"]);
+            return self.people;
+        }
+        
+        [self setDatos:peopleDict];
     }
-    
-    [self setDatos:peopleDict];
     
     return self.people;
 }

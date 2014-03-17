@@ -28,6 +28,7 @@
 		DDE72D7D18AE1D08003DDF77 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE72D7C18AE1D08003DDF77 /* Security.framework */; };
 		DDE72D7F18AE1D15003DDF77 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE72D7E18AE1D15003DDF77 /* SystemConfiguration.framework */; };
 		DDE72D8218AE27AA003DDF77 /* navController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE72D8118AE27AA003DDF77 /* navController.m */; };
+		DDF2534418D6FD04001D3E35 /* MobileResourcesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF2534318D6FD04001D3E35 /* MobileResourcesTableViewController.m */; };
 		DDF78C1C18D1C840003B63C4 /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78BE318D1C840003B63C4 /* Board.m */; };
 		DDF78C1D18D1C840003B63C4 /* BoardList.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78BE518D1C840003B63C4 /* BoardList.m */; };
 		DDF78C1E18D1C840003B63C4 /* Classroom.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78BE718D1C840003B63C4 /* Classroom.m */; };
@@ -96,6 +97,8 @@
 		DDE72D7E18AE1D15003DDF77 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DDE72D8018AE27AA003DDF77 /* navController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = navController.h; sourceTree = "<group>"; };
 		DDE72D8118AE27AA003DDF77 /* navController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = navController.m; sourceTree = "<group>"; };
+		DDF2534218D6FD04001D3E35 /* MobileResourcesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileResourcesTableViewController.h; sourceTree = "<group>"; };
+		DDF2534318D6FD04001D3E35 /* MobileResourcesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileResourcesTableViewController.m; sourceTree = "<group>"; };
 		DDF78BE218D1C840003B63C4 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
 		DDF78BE318D1C840003B63C4 /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Board.m; sourceTree = "<group>"; };
 		DDF78BE418D1C840003B63C4 /* BoardList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardList.h; sourceTree = "<group>"; };
@@ -319,6 +322,8 @@
 				DDF78C3E18D1DEA7003B63C4 /* MailMessagesTableViewController.m */,
 				DD053F0A18D2F46A00143158 /* CalendarEventsPostTableViewController.h */,
 				DD053F0B18D2F46A00143158 /* CalendarEventsPostTableViewController.m */,
+				DDF2534218D6FD04001D3E35 /* MobileResourcesTableViewController.h */,
+				DDF2534318D6FD04001D3E35 /* MobileResourcesTableViewController.m */,
 			);
 			name = "Exemple App i Crides Llibreria";
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 				DDF78C2918D1C840003B63C4 /* MessageList.m in Sources */,
 				DDF78C3518D1C840003B63C4 /* TeachingMaterial.m in Sources */,
 				DDF78C3718D1C840003B63C4 /* User.m in Sources */,
+				DDF2534418D6FD04001D3E35 /* MobileResourcesTableViewController.m in Sources */,
 				DDF78C2318D1C840003B63C4 /* FolderList.m in Sources */,
 				DDF78C3218D1C840003B63C4 /* SettingValue.m in Sources */,
 				DDF78C3018D1C840003B63C4 /* Setting.m in Sources */,

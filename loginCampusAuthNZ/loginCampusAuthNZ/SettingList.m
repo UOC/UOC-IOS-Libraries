@@ -35,14 +35,16 @@
     
     NSData *settingsData = [NSData dataWithContentsOfURL:settingsURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:settingsData encoding:NSUTF8StringEncoding]);
-    NSDictionary *settingsDict = [NSJSONSerialization JSONObjectWithData:settingsData options:0 error:nil];
-    
-    if ([settingsDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [settingsDict valueForKey:@"error"], [settingsDict valueForKey:@"error_description"]);
-        return self.settings;
+    if(settingsData != nil){
+        NSDictionary *settingsDict = [NSJSONSerialization JSONObjectWithData:settingsData options:0 error:nil];
+        
+        if ([settingsDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [settingsDict valueForKey:@"error"], [settingsDict valueForKey:@"error_description"]);
+            return self.settings;
+        }
+        
+        [self setDatos:settingsDict];
     }
-    
-    [self setDatos:settingsDict];
     
     return self.settings;
 }

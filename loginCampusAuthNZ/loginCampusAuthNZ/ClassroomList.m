@@ -34,14 +34,17 @@
     
     NSData *classroomsData = [NSData dataWithContentsOfURL:classroomsURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:classroomsData encoding:NSUTF8StringEncoding]);
-    NSDictionary *classroomsDict = [NSJSONSerialization JSONObjectWithData:classroomsData options:0 error:nil];
-    
-    if ([classroomsDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [classroomsDict valueForKey:@"error"], [classroomsDict valueForKey:@"error_description"]);
-        return self.classrooms;
+    if(classroomsData != nil)
+    {
+        NSDictionary *classroomsDict = [NSJSONSerialization JSONObjectWithData:classroomsData options:0 error:nil];
+        
+        if ([classroomsDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [classroomsDict valueForKey:@"error"], [classroomsDict valueForKey:@"error_description"]);
+            return self.classrooms;
+        }
+        
+        [self setDatos:classroomsDict];
     }
-    
-    [self setDatos:classroomsDict];
     
     return self.classrooms;
 }
@@ -62,14 +65,17 @@
     
     NSData *classroomsData = [NSData dataWithContentsOfURL:classroomsURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:classroomsData encoding:NSUTF8StringEncoding]);
-    NSDictionary *classroomsDict = [NSJSONSerialization JSONObjectWithData:classroomsData options:0 error:nil];
-    
-    if ([classroomsDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [classroomsDict valueForKey:@"error"], [classroomsDict valueForKey:@"error_description"]);
-        return self.classrooms;
+    if(classroomsData != nil)
+    {
+        NSDictionary *classroomsDict = [NSJSONSerialization JSONObjectWithData:classroomsData options:0 error:nil];
+        
+        if ([classroomsDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [classroomsDict valueForKey:@"error"], [classroomsDict valueForKey:@"error_description"]);
+            return self.classrooms;
+        }
+        
+        [self setDatos:classroomsDict];
     }
-    
-    [self setDatos:classroomsDict];
     
     return self.classrooms;
 }

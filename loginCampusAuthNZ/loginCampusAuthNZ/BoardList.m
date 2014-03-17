@@ -36,14 +36,16 @@
     
     NSData *boardsData = [NSData dataWithContentsOfURL:boardsURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:boardsData encoding:NSUTF8StringEncoding]);
-    NSDictionary *boardsDict = [NSJSONSerialization JSONObjectWithData:boardsData options:0 error:nil];
+    if(boardsData != nil) {
+        NSDictionary *boardsDict = [NSJSONSerialization JSONObjectWithData:boardsData options:0 error:nil];
         
-    if ([boardsDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [boardsDict valueForKey:@"error"], [boardsDict valueForKey:@"error_description"]);
-        return self.boards;
+        if ([boardsDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [boardsDict valueForKey:@"error"], [boardsDict valueForKey:@"error_description"]);
+            return self.boards;
+        }
+        
+        [self setDatos:boardsDict];
     }
-        
-    [self setDatos:boardsDict];
     
     return self.boards;
 }
@@ -65,14 +67,16 @@
     
     NSData *boardsData = [NSData dataWithContentsOfURL:boardsURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:boardsData encoding:NSUTF8StringEncoding]);
-    NSDictionary *boardsDict = [NSJSONSerialization JSONObjectWithData:boardsData options:0 error:nil];
-    
-    if ([boardsDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [boardsDict valueForKey:@"error"], [boardsDict valueForKey:@"error_description"]);
-        return self.boards;
+    if(boardsData != nil) {
+        NSDictionary *boardsDict = [NSJSONSerialization JSONObjectWithData:boardsData options:0 error:nil];
+        
+        if ([boardsDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [boardsDict valueForKey:@"error"], [boardsDict valueForKey:@"error_description"]);
+            return self.boards;
+        }
+        
+        [self setDatos:boardsDict];
     }
-    
-    [self setDatos:boardsDict];
     
     return self.boards;
 }

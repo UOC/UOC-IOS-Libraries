@@ -36,14 +36,16 @@
     
     NSData *materialsData = [NSData dataWithContentsOfURL:materialsURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:materialsData encoding:NSUTF8StringEncoding]);
-    NSDictionary *materialsDict = [NSJSONSerialization JSONObjectWithData:materialsData options:0 error:nil];
-    
-    if ([materialsDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [materialsDict valueForKey:@"error"], [materialsDict valueForKey:@"error_description"]);
-        return self.materials;
+    if(materialsData != nil) {
+        NSDictionary *materialsDict = [NSJSONSerialization JSONObjectWithData:materialsData options:0 error:nil];
+        
+        if ([materialsDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [materialsDict valueForKey:@"error"], [materialsDict valueForKey:@"error_description"]);
+            return self.materials;
+        }
+        
+        [self setDatos:materialsDict];
     }
-    
-    [self setDatos:materialsDict];
     
     return self.materials;
 }

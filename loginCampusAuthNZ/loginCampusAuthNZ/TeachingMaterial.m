@@ -37,14 +37,16 @@
     
     NSData *materialData = [NSData dataWithContentsOfURL:materialURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:materialData encoding:NSUTF8StringEncoding]);
-    NSDictionary *materialDict = [NSJSONSerialization JSONObjectWithData:materialData options:0 error:nil];
-    
-    if ([materialDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [materialDict valueForKey:@"error"], [materialDict valueForKey:@"error_description"]);
-        return m;
+    if(materialData != nil){
+        NSDictionary *materialDict = [NSJSONSerialization JSONObjectWithData:materialData options:0 error:nil];
+        
+        if ([materialDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [materialDict valueForKey:@"error"], [materialDict valueForKey:@"error_description"]);
+            return m;
+        }
+        
+        [m setDatos:materialDict];
     }
-    
-    [m setDatos:materialDict];
     
     return m;
 }
@@ -80,15 +82,17 @@
     NSData *data = [NSURLConnection sendSynchronousRequest:request
                                          returningResponse:&response
                                                      error:&error];
-    NSDictionary *materialDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    
-    if ([materialDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [materialDict valueForKey:@"error"], [materialDict valueForKey:@"error_description"]);
-        return m;
+    if(data != nil) {
+        NSDictionary *materialDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        
+        if ([materialDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [materialDict valueForKey:@"error"], [materialDict valueForKey:@"error_description"]);
+            return m;
+        }
+        
+        // Afegim els valors que ens ha tornat en un material que retornem.
+        [m setDatos:materialDict];
     }
-    
-    // Afegim els valors que ens ha tornat en un material que retornem.
-    [m setDatos:materialDict];
     
     return m;
 }

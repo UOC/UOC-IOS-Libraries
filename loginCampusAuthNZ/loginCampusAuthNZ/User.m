@@ -47,16 +47,18 @@
         
     NSLog(@"userData - %@",[[NSString alloc]initWithData:userData encoding:NSUTF8StringEncoding]);
     // Los datos que recibimos los parseamos a una estructura mas manejable como por ejemplo NSDictionary
-    NSDictionary *userDict = [NSJSONSerialization JSONObjectWithData:userData options:0 error:nil];
+    if(userData != nil){
+        NSDictionary *userDict = [NSJSONSerialization JSONObjectWithData:userData options:0 error:nil];
         
-    if ([userDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@",[userDict valueForKey:@"error"],[userDict valueForKey:@"error_description"]);
-        return u;
+        if ([userDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@",[userDict valueForKey:@"error"],[userDict valueForKey:@"error_description"]);
+            return u;
+        }
+        
+        // Los datos recibidos los pasamos al modelo
+        [u setDatos:userDict];
+
     }
-        
-    // Los datos recibidos los pasamos al modelo
-    [u setDatos:userDict];
-       
     return u;
 }
 

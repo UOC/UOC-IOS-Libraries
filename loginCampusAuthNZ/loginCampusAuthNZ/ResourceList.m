@@ -36,14 +36,16 @@
     
     NSData *resourcesData = [NSData dataWithContentsOfURL:resourcesURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:resourcesData encoding:NSUTF8StringEncoding]);
-    NSDictionary *resourcesDict = [NSJSONSerialization JSONObjectWithData:resourcesData options:0 error:nil];
-    
-    if ([resourcesDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [resourcesDict valueForKey:@"error"], [resourcesDict valueForKey:@"error_description"]);
-        return self.resources;
+    if(resourcesData != nil) {
+        NSDictionary *resourcesDict = [NSJSONSerialization JSONObjectWithData:resourcesData options:0 error:nil];
+        
+        if ([resourcesDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [resourcesDict valueForKey:@"error"], [resourcesDict valueForKey:@"error_description"]);
+            return self.resources;
+        }
+        
+        [self setDatos:resourcesDict];
     }
-    
-    [self setDatos:resourcesDict];
     
     return self.resources;
 }
@@ -65,14 +67,16 @@
     
     NSData *resourcesData = [NSData dataWithContentsOfURL:resourcesURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:resourcesData encoding:NSUTF8StringEncoding]);
-    NSDictionary *resourcesDict = [NSJSONSerialization JSONObjectWithData:resourcesData options:0 error:nil];
-    
-    if ([resourcesDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [resourcesDict valueForKey:@"error"], [resourcesDict valueForKey:@"error_description"]);
-        return self.resources;
+    if(resourcesData != nil) {
+        NSDictionary *resourcesDict = [NSJSONSerialization JSONObjectWithData:resourcesData options:0 error:nil];
+        
+        if ([resourcesDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [resourcesDict valueForKey:@"error"], [resourcesDict valueForKey:@"error_description"]);
+            return self.resources;
+        }
+        
+        [self setDatos:resourcesDict];
     }
-    
-    [self setDatos:resourcesDict];
     
     return self.resources;
 }

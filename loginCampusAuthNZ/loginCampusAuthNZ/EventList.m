@@ -34,14 +34,17 @@
     
     NSData *eventsData = [NSData dataWithContentsOfURL:eventsURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:eventsData encoding:NSUTF8StringEncoding]);
-    NSDictionary *eventsDict = [NSJSONSerialization JSONObjectWithData:eventsData options:0 error:nil];
     
-    if ([eventsDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [eventsDict valueForKey:@"error"], [eventsDict valueForKey:@"error_description"]);
-        return self.events;
+    if(eventsData != nil){
+        NSDictionary *eventsDict = [NSJSONSerialization JSONObjectWithData:eventsData options:0 error:nil];
+        
+        if ([eventsDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [eventsDict valueForKey:@"error"], [eventsDict valueForKey:@"error_description"]);
+            return self.events;
+        }
+        
+        [self setDatos:eventsDict];
     }
-    
-    [self setDatos:eventsDict];
     
     return self.events;
 }

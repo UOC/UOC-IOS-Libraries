@@ -126,12 +126,22 @@
         Event *e = [[Event alloc] postCalendarEvents:e1 withToken:self.auth.accessToken];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event Creat"
+            if (e.identifier != nil){
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event Creat"
                                                             message:[NSString stringWithFormat:@"id: %@",e.identifier]
                                                            delegate:self
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
-            [alert show];
+                [alert show];
+            }
+            else{
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                message:@"no s'ha pogut crear l'event"
+                                                               delegate:self
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles:nil];
+                [alert show];
+            }
             [self cargarEventos];
             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         });

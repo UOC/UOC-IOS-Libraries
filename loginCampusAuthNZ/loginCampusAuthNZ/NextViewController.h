@@ -15,6 +15,7 @@
 #import "UserGetViewController.h"
 #import "MailMessagesTableViewController.h"
 #import "CalendarEventsPostTableViewController.h"
+#import "MobileResourcesTableViewController.h"
 
 @interface NextViewController : UIViewController
 
@@ -24,11 +25,11 @@
 @property (nonatomic, strong) IBOutlet UIButton *gotoUserGet;
 @property (nonatomic, strong) IBOutlet UIButton *gotoMailMessagesGet;
 @property (nonatomic, strong) IBOutlet UIButton *gotoCalendarEventsPost;
-
+@property (nonatomic, strong) IBOutlet UIButton *gotoMobileResourcesGet;
 - (void) mostraAccessToken;
 
 - (IBAction)anarUserGet;
 - (IBAction)anarMailMessagesGet;
 - (IBAction)anarCalendarEventsPost;
-
+- (IBAction)anarMobileResourcesGet;
 @end

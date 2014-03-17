@@ -35,15 +35,17 @@
     
     NSData *subjectsData = [NSData dataWithContentsOfURL:subjectsURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:subjectsData encoding:NSUTF8StringEncoding]);
-    NSDictionary *subjectsDict = [NSJSONSerialization JSONObjectWithData:subjectsData options:0 error:nil];
-    
-    if ([subjectsDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [subjectsDict valueForKey:@"error"], [subjectsDict valueForKey:@"error_description"]);
-        return self.subjects;
+    if(subjectsData != nil) {
+        NSDictionary *subjectsDict = [NSJSONSerialization JSONObjectWithData:subjectsData options:0 error:nil];
+        
+        if ([subjectsDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [subjectsDict valueForKey:@"error"], [subjectsDict valueForKey:@"error_description"]);
+            return self.subjects;
+        }
+        
+        [self setDatos:subjectsDict];
+
     }
-    
-    [self setDatos:subjectsDict];
-    
     return self.subjects;
 }
 

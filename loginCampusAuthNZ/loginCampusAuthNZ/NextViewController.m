@@ -60,4 +60,12 @@
     [self.navigationController pushViewController:ceTViewController animated:NO];
 }
 
+
+- (IBAction)anarMobileResourcesGet
+{
+    MobileResourcesTableViewController *mrTViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"mobileResources"];
+    mrTViewController.auth = self.auth;
+    [self.navigationController pushViewController:mrTViewController animated:NO];
+}
+
 @end

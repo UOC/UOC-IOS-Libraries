@@ -37,14 +37,16 @@
     
     NSData *foldersData = [NSData dataWithContentsOfURL:foldersURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:foldersData encoding:NSUTF8StringEncoding]);
-    NSDictionary *foldersDict = [NSJSONSerialization JSONObjectWithData:foldersData options:0 error:nil];
-    
-    if ([foldersDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [foldersDict valueForKey:@"error"], [foldersDict valueForKey:@"error_description"]);
-        return self.folders;
+    if(foldersData != nil){
+        NSDictionary *foldersDict = [NSJSONSerialization JSONObjectWithData:foldersData options:0 error:nil];
+        
+        if ([foldersDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [foldersDict valueForKey:@"error"], [foldersDict valueForKey:@"error_description"]);
+            return self.folders;
+        }
+        
+        [self setDatos:foldersDict];
     }
-    
-    [self setDatos:foldersDict];
     
     return self.folders;
 }
@@ -65,14 +67,16 @@
     
     NSData *foldersData = [NSData dataWithContentsOfURL:foldersURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:foldersData encoding:NSUTF8StringEncoding]);
-    NSDictionary *foldersDict = [NSJSONSerialization JSONObjectWithData:foldersData options:0 error:nil];
-    
-    if ([foldersDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [foldersDict valueForKey:@"error"], [foldersDict valueForKey:@"error_description"]);
-        return self.folders;
+    if(foldersData != nil){
+        NSDictionary *foldersDict = [NSJSONSerialization JSONObjectWithData:foldersData options:0 error:nil];
+        
+        if ([foldersDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [foldersDict valueForKey:@"error"], [foldersDict valueForKey:@"error_description"]);
+            return self.folders;
+        }
+        
+        [self setDatos:foldersDict];
     }
-    
-    [self setDatos:foldersDict];
     
     return self.folders;
 }
@@ -95,14 +99,16 @@
     
     NSData *foldersData = [NSData dataWithContentsOfURL:foldersURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:foldersData encoding:NSUTF8StringEncoding]);
-    NSDictionary *foldersDict = [NSJSONSerialization JSONObjectWithData:foldersData options:0 error:nil];
-    
-    if ([foldersDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [foldersDict valueForKey:@"error"], [foldersDict valueForKey:@"error_description"]);
-        return self.folders;
+    if(foldersData != nil){
+        NSDictionary *foldersDict = [NSJSONSerialization JSONObjectWithData:foldersData options:0 error:nil];
+        
+        if ([foldersDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [foldersDict valueForKey:@"error"], [foldersDict valueForKey:@"error_description"]);
+            return self.folders;
+        }
+        
+        [self setDatos:foldersDict];
     }
-    
-    [self setDatos:foldersDict];
     
     return self.folders;
 }

@@ -36,15 +36,17 @@
     
     NSData *usersData = [NSData dataWithContentsOfURL:usersURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:usersData encoding:NSUTF8StringEncoding]);
-    NSDictionary *usersDict = [NSJSONSerialization JSONObjectWithData:usersData options:0 error:nil];
-    
-    if ([usersDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [usersDict valueForKey:@"error"], [usersDict valueForKey:@"error_description"]);
-        return self.users;
+    if(usersData != nil) {
+        NSDictionary *usersDict = [NSJSONSerialization JSONObjectWithData:usersData options:0 error:nil];
+        
+        if ([usersDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [usersDict valueForKey:@"error"], [usersDict valueForKey:@"error_description"]);
+            return self.users;
+        }
+        
+        [self setDatos:usersDict];
+
     }
-    
-    [self setDatos:usersDict];
-    
     return self.users;
 }
 
@@ -65,14 +67,17 @@
     
     NSData *usersData = [NSData dataWithContentsOfURL:usersURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:usersData encoding:NSUTF8StringEncoding]);
-    NSDictionary *usersDict = [NSJSONSerialization JSONObjectWithData:usersData options:0 error:nil];
-    
-    if ([usersDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [usersDict valueForKey:@"error"], [usersDict valueForKey:@"error_description"]);
-        return self.users;
+    if(usersData != nil) {
+        NSDictionary *usersDict = [NSJSONSerialization JSONObjectWithData:usersData options:0 error:nil];
+        
+        if ([usersDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [usersDict valueForKey:@"error"], [usersDict valueForKey:@"error_description"]);
+            return self.users;
+        }
+        
+        [self setDatos:usersDict];
+        
     }
-    
-    [self setDatos:usersDict];
     
     return self.users;
 }
@@ -94,14 +99,17 @@
     
     NSData *usersData = [NSData dataWithContentsOfURL:usersURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:usersData encoding:NSUTF8StringEncoding]);
-    NSDictionary *usersDict = [NSJSONSerialization JSONObjectWithData:usersData options:0 error:nil];
-    
-    if ([usersDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [usersDict valueForKey:@"error"], [usersDict valueForKey:@"error_description"]);
-        return self.users;
+    if(usersData != nil) {
+        NSDictionary *usersDict = [NSJSONSerialization JSONObjectWithData:usersData options:0 error:nil];
+        
+        if ([usersDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [usersDict valueForKey:@"error"], [usersDict valueForKey:@"error_description"]);
+            return self.users;
+        }
+        
+        [self setDatos:usersDict];
+        
     }
-    
-    [self setDatos:usersDict];
     
     return self.users;
 }
@@ -123,14 +131,17 @@
     
     NSData *usersData = [NSData dataWithContentsOfURL:usersURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:usersData encoding:NSUTF8StringEncoding]);
-    NSDictionary *usersDict = [NSJSONSerialization JSONObjectWithData:usersData options:0 error:nil];
-    
-    if ([usersDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [usersDict valueForKey:@"error"], [usersDict valueForKey:@"error_description"]);
-        return self.users;
+    if(usersData != nil) {
+        NSDictionary *usersDict = [NSJSONSerialization JSONObjectWithData:usersData options:0 error:nil];
+        
+        if ([usersDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [usersDict valueForKey:@"error"], [usersDict valueForKey:@"error_description"]);
+            return self.users;
+        }
+        
+        [self setDatos:usersDict];
+        
     }
-    
-    [self setDatos:usersDict];
     
     return self.users;
 }
@@ -151,14 +162,17 @@
     
     NSData *usersData = [NSData dataWithContentsOfURL:usersURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:usersData encoding:NSUTF8StringEncoding]);
-    NSDictionary *usersDict = [NSJSONSerialization JSONObjectWithData:usersData options:0 error:nil];
-    
-    if ([usersDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [usersDict valueForKey:@"error"], [usersDict valueForKey:@"error_description"]);
-        return self.users;
+    if(usersData != nil) {
+        NSDictionary *usersDict = [NSJSONSerialization JSONObjectWithData:usersData options:0 error:nil];
+        
+        if ([usersDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [usersDict valueForKey:@"error"], [usersDict valueForKey:@"error_description"]);
+            return self.users;
+        }
+        
+        [self setDatos:usersDict];
+        
     }
-    
-    [self setDatos:usersDict];
     
     return self.users;
 }

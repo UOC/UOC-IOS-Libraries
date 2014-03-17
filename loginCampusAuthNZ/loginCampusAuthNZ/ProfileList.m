@@ -36,14 +36,16 @@
     
     NSData *profilesData = [NSData dataWithContentsOfURL:profilesURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:profilesData encoding:NSUTF8StringEncoding]);
-    NSDictionary *profilesDict = [NSJSONSerialization JSONObjectWithData:profilesData options:0 error:nil];
-    
-    if ([profilesDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [profilesDict valueForKey:@"error"], [profilesDict valueForKey:@"error_description"]);
-        return self.profiles;
+    if(profilesData != nil){
+        NSDictionary *profilesDict = [NSJSONSerialization JSONObjectWithData:profilesData options:0 error:nil];
+        
+        if ([profilesDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [profilesDict valueForKey:@"error"], [profilesDict valueForKey:@"error_description"]);
+            return self.profiles;
+        }
+        
+        [self setDatos:profilesDict];
     }
-    
-    [self setDatos:profilesDict];
     
     return self.profiles;
 }
@@ -64,14 +66,16 @@
     
     NSData *profilesData = [NSData dataWithContentsOfURL:profilesURL];
     NSLog(@"Data - %@", [[NSString alloc] initWithData:profilesData encoding:NSUTF8StringEncoding]);
-    NSDictionary *profilesDict = [NSJSONSerialization JSONObjectWithData:profilesData options:0 error:nil];
-    
-    if ([profilesDict valueForKey:@"error"]) {
-        NSLog(@"%@: %@", [profilesDict valueForKey:@"error"], [profilesDict valueForKey:@"error_description"]);
-        return self.profiles;
+    if(profilesData != nil){
+        NSDictionary *profilesDict = [NSJSONSerialization JSONObjectWithData:profilesData options:0 error:nil];
+        
+        if ([profilesDict valueForKey:@"error"]) {
+            NSLog(@"%@: %@", [profilesDict valueForKey:@"error"], [profilesDict valueForKey:@"error_description"]);
+            return self.profiles;
+        }
+        
+        [self setDatos:profilesDict];
     }
-    
-    [self setDatos:profilesDict];
     
     return self.profiles;
 }
