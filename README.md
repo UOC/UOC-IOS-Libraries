@@ -2,16 +2,24 @@ UOC-IOS-Libraries
 =================
 
 * [Introduction](#introduction)
-* [ToDo](#todo)
+* [How To Use](#how-to-use)
 * [More Information](#more-information)
 
-##Introduction
+## Introduction
 
 This iOS library contains the login functions for UOC Campus and the calls to the OpenAPI.
 
-## ToDo
+## How To Use
 
-Document How to use
+Step 1: Download this repository
+
+Step 2: Open the project file (loginCampusAuthNZ.xcodeproj) with Xcode.
+
+Step 3: Modify the Constants.h file with your secret and client.
+
+Step 4: Change the NextViewController with the first view of your program after login.
+
+(Optional) Step 5: Change the name of the project.
 
 ## More Information
 
