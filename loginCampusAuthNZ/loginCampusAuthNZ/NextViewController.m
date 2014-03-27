@@ -36,6 +36,12 @@
 
 - (void) mostraAccessToken
 {
+    /*NSString* path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *storepath = [[NSString alloc] initWithFormat:@"%@/login.plist", path ];
+    NSLog(@"storepath %@", storepath);
+    NSData *data = [NSData dataWithContentsOfFile:storepath options:NSDataReadingMappedAlways error:nil];
+    NSLog(@"data - %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding ]);
+    */
     [self.tokenActual setText:[NSString stringWithFormat:@"access_token = %@",self.auth.accessToken]];
 }
 

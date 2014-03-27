@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "Constants.h"
+#import "PDKeychainBindings.h"
+
 
 @interface authObj : NSObject
 

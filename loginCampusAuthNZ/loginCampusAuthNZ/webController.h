@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import "PDKeychainBindings.h"
 
 @interface webController : UIViewController<UIWebViewDelegate, NSURLConnectionDataDelegate,  NSURLConnectionDelegate>
 
@@ -20,16 +21,3 @@
 
 @end
 
-typedef NS_ENUM(NSInteger, OAPIConnectionType) {
-    OAPIConnectionRequestType,
-    OAPIConnectionTokenExchangeType,
-    OAPIConnectionTokenRenewType
-};
-
-@interface OpenAPIURLConnection : NSURLConnection
-
-@property (strong, nonatomic) NSString *rId;
-@property (assign, nonatomic) OAPIConnectionType requestType;
-@property (strong, nonatomic) NSString *notification;
-
-@end

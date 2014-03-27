@@ -13,7 +13,7 @@
 - (void) setAuth:(NSDictionary *)dict
 {
     self.accessToken = [dict objectForKey:@"access_token"];
-    NSLog(@"setAuth - %@", self.accessToken);
+    //NSLog(@"setAuth - %@", self.accessToken);
     self.tokenType = [dict objectForKey:@"token_type"];
     self.refreshToken = [dict objectForKey:@"refresh_token"];
     self.expiresIn = [dict objectForKey:@"expires_in"];
@@ -40,7 +40,7 @@
 - (BOOL)shouldRefreshToken {
     // We should refresh the access token when it's missing or nearly expired
     // and we have a refresh token
-    NSLog(@"entra shouldRefreshToken");
+    //NSLog(@"entra shouldRefreshToken");
     BOOL shouldRefresh = NO;
     NSString *accessToken = self.accessToken;
     NSString *refreshToken = self.refreshToken;
@@ -68,14 +68,22 @@
 
 - (void) refreshAccessToken
 {
+    // canviar el stdDefaults per el fitxer.
     NSUserDefaults *stdDefaults = [NSUserDefaults standardUserDefaults];
+    
+    PDKeychainBindings *keychainDef = [PDKeychainBindings sharedKeychainBindings];
+    
     NSString *refreshToken = self.refreshToken;
     
     NSString *postString = [NSString stringWithFormat:@"client_id=%@" \
                       "&client_secret=%@" \
                       "&grant_type=refresh_token" \
                       "&refresh_token=%@" ,
-                      [stdDefaults objectForKey:@"client"], [stdDefaults objectForKey:@"secret"], refreshToken];
+                      [keychainDef objectForKey:@"client"], [keychainDef objectForKey:@"secret"], refreshToken];
+    
+    
+    //NSLog(@"postString - %@", postString);
+    
     
     NSMutableURLRequest *tokenRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:urlToken]];
     
@@ -87,11 +95,14 @@
     NSData *data = [NSURLConnection sendSynchronousRequest:tokenRequest
                                          returningResponse:&response
                                                      error:&error];
-    NSLog(@"refreshData - %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    //NSLog(@"refreshData - %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
     if(data != nil){
+        
         NSDictionary *oAuth = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        [stdDefaults setValue:[oAuth objectForKey:@"access_token"] forKey:@"access_token"];
-        [stdDefaults setValue:[oAuth objectForKey:@"refresh_token"] forKey:@"refresh_token"]; //Guardem el refresh per si canvies.
+        [stdDefaults setValue:@"OK" forKey:@"access_token"];
+        [stdDefaults setValue:@"OK" forKey:@"refresh_token"]; //Guardem que tenim valor al refresh.
+        [keychainDef setObject:[oAuth objectForKey:@"access_token"] forKey:@"access_token"];
+        [keychainDef setObject:[oAuth objectForKey:@"refresh_token"] forKey:@"refresh_token"];
         [self setAuth:oAuth];
     }
 

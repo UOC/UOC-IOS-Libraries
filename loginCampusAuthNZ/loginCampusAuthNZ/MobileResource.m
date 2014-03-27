@@ -14,16 +14,16 @@
 {
     self.ident = [mobileResourcesDictionary objectForKey:@"id"];
     self.type = [mobileResourcesDictionary objectForKey:@"type"];
-    self.url_ios = [mobileResourcesDictionary objectForKey:@"urlIOS"];
-    self.url_market_ios = [mobileResourcesDictionary objectForKey:@"urlMarketIOS"];
-    self.name_ios = [mobileResourcesDictionary objectForKey:@"nameIOS"];
-    self.logo_ios = [mobileResourcesDictionary objectForKey:@"logoIOS"];
-    self.info_ios = [mobileResourcesDictionary objectForKey:@"descriptionIOS"];
-    self.url_android = [mobileResourcesDictionary objectForKey:@"urlAndroid"];
-    self.url_market_android = [mobileResourcesDictionary objectForKey:@"urlMarketAndroid"];
-    self.name_android = [mobileResourcesDictionary objectForKey:@"nameAndroid"];
-    self.logo_android = [mobileResourcesDictionary objectForKey:@"logoAndroid"];
-    self.info_android = [mobileResourcesDictionary objectForKey:@"descriptionAndroid"];
+    self.urlIOS = [mobileResourcesDictionary objectForKey:@"urlIOS"];
+    self.urlMarketIOS = [mobileResourcesDictionary objectForKey:@"urlMarketIOS"];
+    self.nameIOS = [mobileResourcesDictionary objectForKey:@"nameIOS"];
+    self.logoIOS = [mobileResourcesDictionary objectForKey:@"logoIOS"];
+    self.descriptionIOS = [mobileResourcesDictionary objectForKey:@"descriptionIOS"];
+    self.urlAndroid = [mobileResourcesDictionary objectForKey:@"urlAndroid"];
+    self.urlMarketAndroid = [mobileResourcesDictionary objectForKey:@"urlMarketAndroid"];
+    self.nameAndroid = [mobileResourcesDictionary objectForKey:@"nameAndroid"];
+    self.logoAndroid = [mobileResourcesDictionary objectForKey:@"logoAndroid"];
+    self.descriptionAndroid = [mobileResourcesDictionary objectForKey:@"descriptionAndroid"];
     
     
 }

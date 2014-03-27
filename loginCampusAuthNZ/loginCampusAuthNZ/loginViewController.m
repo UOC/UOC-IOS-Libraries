@@ -27,6 +27,7 @@
     //[stdDefaults removeObjectForKey:@"firstLogin"];
     //[stdDefaults removeObjectForKey:@"registrada"];
 	// Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,17 +38,27 @@
 
 - (void) borraVariables
 {
+    NSLog(@"Esborrar");
     NSUserDefaults *stdDefaults = [NSUserDefaults standardUserDefaults];
+    //NSLog(@"stdDef - %@", [[stdDefaults dictionaryRepresentation] description]);
     [stdDefaults removeObjectForKey:@"registrada"];
     [stdDefaults removeObjectForKey:@"access_token"];
     [stdDefaults removeObjectForKey:@"secret"];
     [stdDefaults removeObjectForKey:@"nextView"];
     [stdDefaults removeObjectForKey:@"client"];
     [stdDefaults removeObjectForKey:@"refresh_token"];
+    
+    PDKeychainBindings *keychainDef = [PDKeychainBindings sharedKeychainBindings];
+
+    [keychainDef removeObjectForKey:@"access_token"];
+    [keychainDef removeObjectForKey:@"client"];
+    [keychainDef removeObjectForKey:@"refresh_token"];
+    [keychainDef removeObjectForKey:@"secret"];
+    
     NSHTTPCookie *cookie;
     NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
     for (cookie in [storage cookies]) {
-        NSLog(@"Cookie - %@", cookie);
+        // NSLog(@"Cookie - %@", cookie);
         [storage deleteCookie:cookie];
     }
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -57,27 +68,36 @@
 -(void) viewDidAppear:(BOOL)animated
 {
     NSUserDefaults *stdDefaults = [NSUserDefaults standardUserDefaults];
+    PDKeychainBindings *keychainDef = [PDKeychainBindings sharedKeychainBindings];
+
     if([stdDefaults objectForKey:@"nextView"]==FALSE){
         if([stdDefaults objectForKey:@"registrada"]){
             if([stdDefaults objectForKey:@"secret"]==FALSE){
-                NSLog(@"URL - %@", [NSString stringWithFormat:@"%@?access_token=%@",urlApp, [stdDefaults objectForKey:@"access_token"]]);
+                //NSLog(@"URL - %@", [NSString stringWithFormat:@"%@?access_token=%@",urlApp, [stdDefaults objectForKey:@"access_token"]]);
                 [self.loading startAnimating];
                 [self.loading setHidden:FALSE];
                 [self.loginButton setEnabled:FALSE];
                 
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                                       
                     NSDictionary *oAuth = [NSJSONSerialization JSONObjectWithData:self.viewController.receivedData options:0 error:nil];
                     [self.auth setAuth:oAuth];
                     
-                    NSURL *obtenirCredencials =[NSURL URLWithString:[NSString stringWithFormat:@"%@?access_token=%@", urlApp, [stdDefaults objectForKey:@"access_token"]]];
+                    NSURL *obtenirCredencials =[NSURL URLWithString:[NSString stringWithFormat:@"%@?access_token=%@", urlApp, [keychainDef objectForKey:@"access_token"]]];
                     
                     NSData *credencials = [NSData dataWithContentsOfURL:obtenirCredencials];
                     
                     NSDictionary *credencialsDict = [NSJSONSerialization JSONObjectWithData:credencials options:0 error:nil];
                     
-                    [stdDefaults setValue:[credencialsDict objectForKey:@"name"] forKey:@"access_token"];
-                    [stdDefaults setValue:[credencialsDict objectForKey:@"secret"] forKey:@"secret"];
-                    [stdDefaults setValue:[credencialsDict objectForKey:@"client"] forKey:@"client"];
+                    // Afegim marques per saber en quin punt de l'autenticacio estem.
+                    [stdDefaults setValue:@"OK" forKey:@"access_token"];
+                    [stdDefaults setValue:@"OK" forKey:@"secret"];
+                    [stdDefaults setValue:@"OK" forKey:@"client"];
+                    
+                    // Guardem les dades de forma segura en un clauer (keychain)
+                    [keychainDef setObject:[credencialsDict objectForKey:@"name"] forKey:@"access_token"];
+                    [keychainDef setObject:[credencialsDict objectForKey:@"secret"] forKey:@"secret"];
+                    [keychainDef setObject:[credencialsDict objectForKey:@"client"] forKey:@"client"];
                     dispatch_async(dispatch_get_main_queue(), ^{
                         
                         [self.loginButton setEnabled:TRUE];
@@ -85,7 +105,7 @@
                         [self.loading setHidden:TRUE];
                         [self goToNextView];
                         
-                        NSLog(@"credencials - %@", [[NSString alloc] initWithData:credencials encoding:NSUTF8StringEncoding]);
+                        //NSLog(@"credencials - %@", [[NSString alloc] initWithData:credencials encoding:NSUTF8StringEncoding]);
                     });
                 });
                 
@@ -111,8 +131,9 @@
 {
     NSUserDefaults *stdDefaults = [NSUserDefaults standardUserDefaults];
     [stdDefaults removeObjectForKey:@"nextView"];
-     // Canvieu aquest controlador pel primer controlador de la vostra app
+    // Canvieu aquest controlador pel primer controlador de la vostra app
     NextViewController *nextView = [self.storyboard instantiateViewControllerWithIdentifier:@"nextView"];
+    // Es important anar passant el authObj ja que aquest conte el token
     nextView.auth = self.auth;
     [self.navigationController pushViewController:nextView animated:YES];
 }
@@ -129,6 +150,7 @@
 
 - (void) ferLogin
 {
+    PDKeychainBindings *keychainDef = [PDKeychainBindings sharedKeychainBindings];
     NSUserDefaults *stdDefaults = [NSUserDefaults standardUserDefaults];
     if([stdDefaults objectForKey:@"registrada"]==FALSE){
         if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
@@ -141,17 +163,26 @@
             self.viewController.extra = [[NSString stringWithFormat:@"device=%@&", [[UIDevice currentDevice] name]] stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
             [[self navigationController] pushViewController:self.viewController animated:YES];
         }
-        NSLog(@"Anar a registrar l'app");
+        //NSLog(@"Anar a registrar l'app");
     }
     else{
         
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+
+        [self.loading startAnimating];
+        [self.loading setHidden:FALSE];
+        [self.loginButton setEnabled:FALSE];
+        
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             
-            self.auth.refreshToken = [stdDefaults objectForKey:@"refresh_token"];
+            self.auth.refreshToken = [keychainDef objectForKey:@"refresh_token"];
             [self.auth refreshAccessToken];
             
             dispatch_async(dispatch_get_main_queue(), ^{
-
+                [self.loginButton setEnabled:TRUE];
+                [self.loading stopAnimating];
+                [self.loading setHidden:TRUE];
+                [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                 if(self.auth.accessToken != nil) [self goToNextView];
                 else {
                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"LOGIN ERROR"

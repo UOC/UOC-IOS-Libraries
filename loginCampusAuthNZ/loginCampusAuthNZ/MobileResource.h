@@ -13,16 +13,16 @@
 
 @property (nonatomic, retain) NSString *ident;
 @property (nonatomic, retain) NSString *type;
-@property (nonatomic, retain) NSString *url_ios;
-@property (nonatomic, retain) NSString *url_market_ios;
-@property (nonatomic, retain) NSString *name_ios;
-@property (nonatomic, retain) NSString *logo_ios;
-@property (nonatomic, retain) NSString *info_ios;
-@property (nonatomic, retain) NSString *url_android;
-@property (nonatomic, retain) NSString *url_market_android;
-@property (nonatomic, retain) NSString *name_android;
-@property (nonatomic, retain) NSString *logo_android;
-@property (nonatomic, retain) NSString *info_android;
+@property (nonatomic, retain) NSString *urlIOS;
+@property (nonatomic, retain) NSString *urlMarketIOS;
+@property (nonatomic, retain) NSString *nameIOS;
+@property (nonatomic, retain) NSString *logoIOS;
+@property (nonatomic, retain) NSString *descriptionIOS;
+@property (nonatomic, retain) NSString *urlAndroid;
+@property (nonatomic, retain) NSString *urlMarketAndroid;
+@property (nonatomic, retain) NSString *nameAndroid;
+@property (nonatomic, retain) NSString *logoAndroid;
+@property (nonatomic, retain) NSString *descriptionAndroid;
 //@property (nonatomic, retain) UIImage *photo; // UIImage version of photoUrl
 
 - (void) setDatos:(NSDictionary *)mobileResourcesDictionary;

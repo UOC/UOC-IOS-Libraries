@@ -55,7 +55,7 @@
     MobileResource *app = [self.resources objectAtIndex:indexPath.row];
     
     // Recuperamos el nombre que queremos poner de titulo a la celda
-    NSString *CellIdentifier = [[NSString alloc] initWithString:app.name_ios];
+    NSString *CellIdentifier = [[NSString alloc] initWithString:app.nameIOS];
     
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     
@@ -71,13 +71,13 @@
 {
     // Mirar si l'app esta instalada. Si esta instalada accedir. Sino instalar
     MobileResource *aux = [self.resources objectAtIndex:indexPath.row];
-    NSURL *myURL = [NSURL URLWithString:aux.url_ios];
+    NSURL *myURL = [NSURL URLWithString:aux.urlIOS];
     // Comprovem que es pugui obrir l'aplicacio que volem.
     if ([[UIApplication sharedApplication] canOpenURL:myURL] == YES){
         [[UIApplication sharedApplication] openURL:myURL];
     }
     else {
-        NSURL *marketURL = [NSURL URLWithString:aux.url_market_ios];
+        NSURL *marketURL = [NSURL URLWithString:aux.urlMarketIOS];
         [[UIApplication sharedApplication] openURL:marketURL];
     }
 }

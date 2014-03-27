@@ -53,8 +53,9 @@
         if([stdDefaults objectForKey:@"secret"]==FALSE){
             [stdDefaults removeObjectForKey:@"registrada"];
         }
-        NSLog(@"applicationWillTerminate");
+        //NSLog(@"applicationWillTerminate");
     }
+    //NSLog(@"applicationWillTerminate2");
 }
 
 @end

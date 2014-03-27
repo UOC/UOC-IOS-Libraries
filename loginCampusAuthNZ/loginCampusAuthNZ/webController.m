@@ -20,7 +20,7 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    NSLog(@"nib - %@",nibNameOrNil);
+    //NSLog(@"nib - %@",nibNameOrNil);
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self != nil) {
         // Custom initialization
@@ -39,7 +39,9 @@
         urlReq= [NSURL URLWithString:[[NSString alloc] initWithFormat:@"%@?%@client_id=%@&redirect_uri=%@&response_type=code",urlAuth, self.extra, idClient, urlRedirect]];
     }
     else{
-        urlReq= [NSURL URLWithString:[[NSString alloc] initWithFormat:@"%@?%@client_id=%@&redirect_uri=%@&response_type=code",urlAuth, self.extra, [stdDefaults objectForKey:@"client"], urlRedirect]];
+        PDKeychainBindings *keychainDef = [PDKeychainBindings sharedKeychainBindings];
+       
+        urlReq= [NSURL URLWithString:[[NSString alloc] initWithFormat:@"%@?%@client_id=%@&redirect_uri=%@&response_type=code",urlAuth, self.extra, [keychainDef objectForKey:@"client"], urlRedirect]];
     }
     NSURLRequest *req = [NSURLRequest requestWithURL:urlReq];
     [self.webView setScalesPageToFit:YES];
@@ -54,21 +56,21 @@
 
 - (void) webViewDidFinishLoad:(UIWebView *)webView2{
     // Intentarem fer un get de l'access_token
-    if([webView2.request URL].query != nil){
+    /* if([webView2.request URL].query != nil){
         NSDictionary *dict = [self parseQueryString:[webView2.request URL].query];
         for (id key in dict) {
             NSLog(@"key: %@, value: %@ \n", key, [dict objectForKey:key]);
         }
-    }
+    } */
     
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    NSLog(@"webView shouldStartLoadWithRequest");
+    // NSLog(@"webView shouldStartLoadWithRequest");
     NSString *urlRequest = [[request URL] absoluteString];
     
-    NSLog(@"%@",urlRequest);
+    //NSLog(@"%@",urlRequest);
     if ([urlRequest rangeOfString:@"?code="].location == NSNotFound) {
         NSMutableDictionary* details = [NSMutableDictionary dictionary];
         [details setValue:@"No token request code provided after redirection from OAuth provider" forKey:NSLocalizedDescriptionKey];
@@ -87,7 +89,7 @@
 {
     NSUserDefaults *stdDefaults = [NSUserDefaults standardUserDefaults];
 
-    NSLog(@"accessTokenExchange - %@", code);
+    //NSLog(@"accessTokenExchange - %@", code);
     NSString *postString;
     if([stdDefaults objectForKey:@"secret"]==FALSE){
     postString = [NSString stringWithFormat:@"client_id=%@" \
@@ -98,12 +100,14 @@
                             idClient, secretClient, code, urlRedirect];
     }
     else {
+        PDKeychainBindings *keychainDef = [PDKeychainBindings sharedKeychainBindings];
+
         postString = [NSString stringWithFormat:@"client_id=%@" \
                       "&client_secret=%@" \
                       "&grant_type=authorization_code" \
                       "&code=%@" \
                       "&redirect_uri=%@",
-                      [stdDefaults objectForKey:@"client"], [stdDefaults objectForKey:@"secret"], code, urlRedirect];
+                      [keychainDef objectForKey:@"client"], [keychainDef objectForKey:@"secret"], code, urlRedirect];
     }
     NSMutableURLRequest *tokenRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:urlToken]];
     
@@ -116,7 +120,7 @@
 }
 
 - (void) webViewDidStartLoad:(UIWebView *)webView2{
-    NSLog(@"Start -%@", [webView2.request URL]);
+    //NSLog(@"Start -%@", [webView2.request URL]);
 }
 
 - (NSDictionary *)parseQueryString:(NSString *)query {
@@ -139,21 +143,25 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
-    NSLog(@"connection didReceiveResponse");
-    NSLog(@"response = %@", [response description]);
+    // NSLog(@"connection didReceiveResponse");
+    // NSLog(@"response = %@", [response description]);
     self.receivedData = nil;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
     NSUserDefaults *stdDefaults = [NSUserDefaults standardUserDefaults];
+    PDKeychainBindings *keychainDef = [PDKeychainBindings sharedKeychainBindings];
 
-    NSLog(@"connection didReceiveData - %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    //NSLog(@"connection didReceiveData - %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
     
     NSDictionary *tokens = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    [stdDefaults setValue:[tokens objectForKey:@"access_token"] forKey:@"access_token"];
-    [stdDefaults setValue:[tokens objectForKey:@"refresh_token"] forKey:@"refresh_token"];
-    //NSLog(@"access_token0 = %@", [tokens objectForKey:@"access_token"]);
+    [stdDefaults setValue:@"OK" forKey:@"access_token"];
+    [stdDefaults setValue:@"OK" forKey:@"refresh_token"];
+    [keychainDef setObject:[tokens objectForKey:@"access_token"] forKey:@"access_token"];
+    [keychainDef setObject:[tokens objectForKey:@"refresh_token"] forKey:@"refresh_token"];
+    
+   
     
     if (_receivedData == nil){
         [stdDefaults setBool:YES forKey:@"registrada"];
@@ -185,14 +193,14 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-    NSLog(@"connection didFailWithError");
-   // NSMutableDictionary *errorInfo = [NSMutableDictionary dictionaryWithObject:error forKey:@"error"];
+    // NSLog(@"connection didFailWithError");
+    // NSMutableDictionary *errorInfo = [NSMutableDictionary dictionaryWithObject:error forKey:@"error"];
     
 }
 
 - (void) connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    NSLog(@"connectionDidFinishLoading");
+    // NSLog(@"connectionDidFinishLoading");
 }
 
 

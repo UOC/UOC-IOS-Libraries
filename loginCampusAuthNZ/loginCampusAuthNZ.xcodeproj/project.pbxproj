@@ -28,6 +28,9 @@
 		DDE72D7D18AE1D08003DDF77 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE72D7C18AE1D08003DDF77 /* Security.framework */; };
 		DDE72D7F18AE1D15003DDF77 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE72D7E18AE1D15003DDF77 /* SystemConfiguration.framework */; };
 		DDE72D8218AE27AA003DDF77 /* navController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE72D8118AE27AA003DDF77 /* navController.m */; };
+		DDEC8E9A18DC35FA005FE8C1 /* PDKeychainBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEC8E9718DC35FA005FE8C1 /* PDKeychainBindings.m */; };
+		DDEC8E9B18DC35FA005FE8C1 /* PDKeychainBindingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEC8E9918DC35FA005FE8C1 /* PDKeychainBindingsController.m */; };
+		DDF20CAB18D995B0007D4C00 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF20CAA18D995B0007D4C00 /* CoreFoundation.framework */; };
 		DDF2534418D6FD04001D3E35 /* MobileResourcesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF2534318D6FD04001D3E35 /* MobileResourcesTableViewController.m */; };
 		DDF78C1C18D1C840003B63C4 /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78BE318D1C840003B63C4 /* Board.m */; };
 		DDF78C1D18D1C840003B63C4 /* BoardList.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF78BE518D1C840003B63C4 /* BoardList.m */; };
@@ -97,6 +100,11 @@
 		DDE72D7E18AE1D15003DDF77 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DDE72D8018AE27AA003DDF77 /* navController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = navController.h; sourceTree = "<group>"; };
 		DDE72D8118AE27AA003DDF77 /* navController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = navController.m; sourceTree = "<group>"; };
+		DDEC8E9618DC35FA005FE8C1 /* PDKeychainBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindings.h; sourceTree = "<group>"; };
+		DDEC8E9718DC35FA005FE8C1 /* PDKeychainBindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindings.m; sourceTree = "<group>"; };
+		DDEC8E9818DC35FA005FE8C1 /* PDKeychainBindingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindingsController.h; sourceTree = "<group>"; };
+		DDEC8E9918DC35FA005FE8C1 /* PDKeychainBindingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindingsController.m; sourceTree = "<group>"; };
+		DDF20CAA18D995B0007D4C00 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		DDF2534218D6FD04001D3E35 /* MobileResourcesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileResourcesTableViewController.h; sourceTree = "<group>"; };
 		DDF2534318D6FD04001D3E35 /* MobileResourcesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileResourcesTableViewController.m; sourceTree = "<group>"; };
 		DDF78BE218D1C840003B63C4 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
@@ -166,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDF20CAB18D995B0007D4C00 /* CoreFoundation.framework in Frameworks */,
 				DDE72D7F18AE1D15003DDF77 /* SystemConfiguration.framework in Frameworks */,
 				DDE72D7D18AE1D08003DDF77 /* Security.framework in Frameworks */,
 				DDE72D4018AE15C7003DDF77 /* CoreGraphics.framework in Frameworks */,
@@ -197,6 +206,7 @@
 		DDE72D3C18AE15C7003DDF77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DDF20CAA18D995B0007D4C00 /* CoreFoundation.framework */,
 				DDE72D7E18AE1D15003DDF77 /* SystemConfiguration.framework */,
 				DDE72D7C18AE1D08003DDF77 /* Security.framework */,
 				DDE72D3D18AE15C7003DDF77 /* Foundation.framework */,
@@ -212,6 +222,7 @@
 			children = (
 				DDF78C3918D1C8F3003B63C4 /* Exemple App i Crides Llibreria */,
 				DDF78BE118D1C7C8003B63C4 /* Llibreria */,
+				DDEC8E9518DC35BF005FE8C1 /* PDKeychainBindings */,
 				DDE72D4C18AE15C7003DDF77 /* AppDelegate.h */,
 				DDE72D4D18AE15C7003DDF77 /* AppDelegate.m */,
 				DDE5A87B18B4AF90007C0C39 /* authObj.h */,
@@ -242,6 +253,17 @@
 				DDE72D4B18AE15C7003DDF77 /* loginCampusAuthNZ-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DDEC8E9518DC35BF005FE8C1 /* PDKeychainBindings */ = {
+			isa = PBXGroup;
+			children = (
+				DDEC8E9618DC35FA005FE8C1 /* PDKeychainBindings.h */,
+				DDEC8E9718DC35FA005FE8C1 /* PDKeychainBindings.m */,
+				DDEC8E9818DC35FA005FE8C1 /* PDKeychainBindingsController.h */,
+				DDEC8E9918DC35FA005FE8C1 /* PDKeychainBindingsController.m */,
+			);
+			name = PDKeychainBindings;
 			sourceTree = "<group>";
 		};
 		DDF78BE118D1C7C8003B63C4 /* Llibreria */ = {
@@ -359,6 +381,20 @@
 				TargetAttributes = {
 					DDE72D3918AE15C7003DDF77 = {
 						DevelopmentTeam = P426M5SKYQ;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.DataProtection = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -422,6 +458,7 @@
 				DDF78C2318D1C840003B63C4 /* FolderList.m in Sources */,
 				DDF78C3218D1C840003B63C4 /* SettingValue.m in Sources */,
 				DDF78C3018D1C840003B63C4 /* Setting.m in Sources */,
+				DDEC8E9A18DC35FA005FE8C1 /* PDKeychainBindings.m in Sources */,
 				DDF78C2718D1C840003B63C4 /* MessageHistory.m in Sources */,
 				DDF78C3818D1C840003B63C4 /* UserList.m in Sources */,
 				DDF78C2618D1C840003B63C4 /* MessageBody.m in Sources */,
@@ -440,6 +477,7 @@
 				DDF78C2C18D1C840003B63C4 /* Profile.m in Sources */,
 				DDF78C3118D1C840003B63C4 /* SettingList.m in Sources */,
 				DDF78C2E18D1C840003B63C4 /* Resource.m in Sources */,
+				DDEC8E9B18DC35FA005FE8C1 /* PDKeychainBindingsController.m in Sources */,
 				DDF78C1D18D1C840003B63C4 /* BoardList.m in Sources */,
 				DDF78C1F18D1C840003B63C4 /* ClassroomList.m in Sources */,
 			);
@@ -560,6 +598,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "loginCampusAuthNZ/loginCampusAuthNZ-Prefix.pch";
 				INFOPLIST_FILE = "loginCampusAuthNZ/loginCampusAuthNZ-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -580,6 +622,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "loginCampusAuthNZ/loginCampusAuthNZ-Prefix.pch";
 				INFOPLIST_FILE = "loginCampusAuthNZ/loginCampusAuthNZ-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
 					"-ObjC",
