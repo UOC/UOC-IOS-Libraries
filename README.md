@@ -23,13 +23,13 @@ Step 1: Download this repository.
 
 Step 2: Open the project file (loginCampusAuthNZ.xcodeproj) with Xcode.
 
-Step 3: Modify the Constants.h file with your secret and client.
+Step 3: Modify the Constants.h file with your secret and client and change the Urls.
 
 Step 4: Change the NextViewController with the first view of your program after login.
 
 (Optional) Step 5: Change the name of the project.
 
-(Optional) Step 6: Remove the logs from the library.
+(Optional) Step 6: Remove the NSLogs from the library.
 
 ## More Information
 
