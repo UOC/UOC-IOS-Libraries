@@ -76,7 +76,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    // Fer coses com per exemple anar a la vista de l'event seleccionat.
+    // pots trobar un exemple a: https://github.com/UOC/UOCAPI-iOS-Examples/blob/master/Exemple%20CalendarEventsGet/EventsViewController.m
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
 }
 - (void)cargarEventos
 {

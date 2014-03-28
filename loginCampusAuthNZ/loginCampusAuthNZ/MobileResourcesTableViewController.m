@@ -69,6 +69,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
     // Mirar si l'app esta instalada. Si esta instalada accedir. Sino instalar
     MobileResource *aux = [self.resources objectAtIndex:indexPath.row];
     NSURL *myURL = [NSURL URLWithString:aux.urlIOS];
@@ -77,9 +78,22 @@
         [[UIApplication sharedApplication] openURL:myURL];
     }
     else {
+        #if TARGET_IPHONE_SIMULATOR
+        
+        // Simulator code
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"El Simulator no te store"
+                                                        message:[NSString stringWithFormat:@"Ruta que s'obre en dispositiu real:\n%@", aux.urlMarketIOS]
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        #else
         NSURL *marketURL = [NSURL URLWithString:aux.urlMarketIOS];
         [[UIApplication sharedApplication] openURL:marketURL];
+        #endif
     }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 

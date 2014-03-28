@@ -32,16 +32,16 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ql9-Yr-Ozk">
-                                <rect key="frame" x="141" y="269" width="38" height="30"/>
+                                <rect key="frame" x="139" y="269" width="43" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="Log in">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="login" destination="20k-Yu-I3U" eventType="touchUpInside" id="nbG-DN-FB4"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gmI-jM-HOA">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gmI-jM-HOA">
                                 <rect key="frame" x="150" y="307" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
@@ -119,7 +119,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoM-U2-Se5">
-                                <rect key="frame" x="59" y="248" width="203" height="30"/>
+                                <rect key="frame" x="59" y="237" width="203" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Exemple CalendarEventsPost">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -128,17 +128,29 @@
                                     <action selector="anarCalendarEventsPost" destination="CoM-ZM-Dy1" eventType="touchUpInside" id="4qS-Hw-dTO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNw-1r-Isd">
+                                <rect key="frame" x="57" y="286" width="207" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Exemple MobileResourcesGet">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="anarMobileResourcesGet" destination="CoM-ZM-Dy1" eventType="touchUpInside" id="qVY-Ab-Qeu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="JlX-J2-odJ" secondAttribute="trailing" constant="20" id="1KD-4P-xHO"/>
+                            <constraint firstItem="XNw-1r-Isd" firstAttribute="top" secondItem="CoM-U2-Se5" secondAttribute="bottom" constant="19" id="3y9-WE-k6A"/>
                             <constraint firstItem="JlX-J2-odJ" firstAttribute="leading" secondItem="E3K-sa-xxa" secondAttribute="leading" constant="20" id="48P-cr-uiM"/>
                             <constraint firstItem="JlX-J2-odJ" firstAttribute="top" secondItem="VDv-xJ-iqz" secondAttribute="bottom" constant="20" id="4iq-Wk-gMU"/>
                             <constraint firstItem="wny-h2-ZjT" firstAttribute="centerX" secondItem="CoM-U2-Se5" secondAttribute="centerX" id="GVq-fR-RY5"/>
                             <constraint firstAttribute="centerX" secondItem="ZKw-Ma-QTm" secondAttribute="centerX" id="KSb-Hf-wm1"/>
+                            <constraint firstItem="CoM-U2-Se5" firstAttribute="top" secondItem="wny-h2-ZjT" secondAttribute="bottom" constant="20" id="LTt-Rg-zka"/>
                             <constraint firstItem="ZKw-Ma-QTm" firstAttribute="top" secondItem="JlX-J2-odJ" secondAttribute="bottom" constant="23" id="TO3-1z-PWv"/>
-                            <constraint firstItem="CoM-U2-Se5" firstAttribute="top" secondItem="wny-h2-ZjT" secondAttribute="bottom" constant="31" id="bEl-LB-ckA"/>
                             <constraint firstItem="wny-h2-ZjT" firstAttribute="top" secondItem="ZKw-Ma-QTm" secondAttribute="bottom" constant="29" id="pGe-6O-Yse"/>
+                            <constraint firstItem="CoM-U2-Se5" firstAttribute="centerX" secondItem="XNw-1r-Isd" secondAttribute="centerX" constant="0.5" id="y9X-ij-RiY"/>
                             <constraint firstItem="wny-h2-ZjT" firstAttribute="centerX" secondItem="ZKw-Ma-QTm" secondAttribute="centerX" id="yKP-HK-e7p"/>
                         </constraints>
                     </view>
@@ -148,9 +160,10 @@
                         <outlet property="gotoMailMessagesGet" destination="wny-h2-ZjT" id="olD-Jj-9Zg"/>
                         <outlet property="gotoUserGet" destination="ZKw-Ma-QTm" id="4Sp-hE-t8J"/>
                         <outlet property="tokenActual" destination="JlX-J2-odJ" id="v4Z-Ou-L8E"/>
-                        <segue destination="Xmp-Vc-WBB" kind="push" id="dCa-8M-jPe"/>
-                        <segue destination="Jtq-Fi-wLL" kind="push" id="bi6-ca-FNe"/>
-                        <segue destination="l26-PP-NV7" kind="push" id="eoZ-O5-Mt8"/>
+                        <segue destination="Xmp-Vc-WBB" kind="push" identifier="fromNextViewtoMailMessages" id="dCa-8M-jPe"/>
+                        <segue destination="Jtq-Fi-wLL" kind="push" identifier="fromNextViewtoUser" id="bi6-ca-FNe"/>
+                        <segue destination="l26-PP-NV7" kind="push" identifier="fromNextViewtoCalendarPost" id="eoZ-O5-Mt8"/>
+                        <segue destination="Tks-fO-UdE" kind="push" identifier="FromNexttoMobileResourcesGet" id="tjf-Jq-F4X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQc-LV-YeN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -166,7 +179,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="JcN-sv-sn4">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="missatges" id="JcN-sv-sn4">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JcN-sv-sn4" id="NpM-E0-zQa">
@@ -195,7 +208,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="gAY-eg-b38">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="event" id="gAY-eg-b38">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gAY-eg-b38" id="7iK-Yt-1mO">
@@ -220,6 +233,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NyL-ho-iTP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1624" y="804"/>
+        </scene>
+        <!--Mobile Resources Table View Controller - MobileResourcesGet-->
+        <scene sceneID="hL9-U2-B1V">
+            <objects>
+                <tableViewController storyboardIdentifier="mobileResources" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tks-fO-UdE" customClass="MobileResourcesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="x89-CQ-CDt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="resource" id="096-l4-MBh">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="096-l4-MBh" id="kP0-Dh-Ufi">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Tks-fO-UdE" id="8ZO-n5-lTU"/>
+                            <outlet property="delegate" destination="Tks-fO-UdE" id="flo-hQ-I06"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="MobileResourcesGet" id="7NX-Su-QP3"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ToA-aL-2jO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1618" y="1500"/>
         </scene>
         <!--User Get View Controller - UserGet-->
         <scene sceneID="EB4-yf-aV7">

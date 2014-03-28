@@ -79,34 +79,44 @@
                 [self.loginButton setEnabled:FALSE];
                 
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                                       
-                    NSDictionary *oAuth = [NSJSONSerialization JSONObjectWithData:self.viewController.receivedData options:0 error:nil];
-                    [self.auth setAuth:oAuth];
-                    
-                    NSURL *obtenirCredencials =[NSURL URLWithString:[NSString stringWithFormat:@"%@?access_token=%@", urlApp, [keychainDef objectForKey:@"access_token"]]];
-                    
-                    NSData *credencials = [NSData dataWithContentsOfURL:obtenirCredencials];
-                    
-                    NSDictionary *credencialsDict = [NSJSONSerialization JSONObjectWithData:credencials options:0 error:nil];
-                    
-                    // Afegim marques per saber en quin punt de l'autenticacio estem.
-                    [stdDefaults setValue:@"OK" forKey:@"access_token"];
-                    [stdDefaults setValue:@"OK" forKey:@"secret"];
-                    [stdDefaults setValue:@"OK" forKey:@"client"];
-                    
-                    // Guardem les dades de forma segura en un clauer (keychain)
-                    [keychainDef setObject:[credencialsDict objectForKey:@"name"] forKey:@"access_token"];
-                    [keychainDef setObject:[credencialsDict objectForKey:@"secret"] forKey:@"secret"];
-                    [keychainDef setObject:[credencialsDict objectForKey:@"client"] forKey:@"client"];
-                    dispatch_async(dispatch_get_main_queue(), ^{
+                    if(self.viewController.receivedData != nil){
+                        NSDictionary *oAuth = [NSJSONSerialization JSONObjectWithData:self.viewController.receivedData options:0 error:nil];
+                        [self.auth setAuth:oAuth];
                         
-                        [self.loginButton setEnabled:TRUE];
-                        [self.loading stopAnimating];
-                        [self.loading setHidden:TRUE];
-                        [self goToNextView];
+                        NSURL *obtenirCredencials =[NSURL URLWithString:[NSString stringWithFormat:@"%@?access_token=%@", urlApp, [keychainDef objectForKey:@"access_token"]]];
                         
-                        //NSLog(@"credencials - %@", [[NSString alloc] initWithData:credencials encoding:NSUTF8StringEncoding]);
-                    });
+                        NSData *credencials = [NSData dataWithContentsOfURL:obtenirCredencials];
+                        
+                        NSDictionary *credencialsDict = [NSJSONSerialization JSONObjectWithData:credencials options:0 error:nil];
+                        
+                        // Afegim marques per saber en quin punt de l'autenticacio estem.
+                        [stdDefaults setValue:@"OK" forKey:@"access_token"];
+                        [stdDefaults setValue:@"OK" forKey:@"secret"];
+                        [stdDefaults setValue:@"OK" forKey:@"client"];
+                        
+                        // Guardem les dades de forma segura en un clauer (keychain)
+                        [keychainDef setObject:[credencialsDict objectForKey:@"name"] forKey:@"access_token"];
+                        [keychainDef setObject:[credencialsDict objectForKey:@"secret"] forKey:@"secret"];
+                        [keychainDef setObject:[credencialsDict objectForKey:@"client"] forKey:@"client"];
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            
+                            [self.loginButton setEnabled:TRUE];
+                            [self.loading stopAnimating];
+                            [self.loading setHidden:TRUE];
+                            [self goToNextView];
+                            
+                            //NSLog(@"credencials - %@", [[NSString alloc] initWithData:credencials encoding:NSUTF8StringEncoding]);
+                        });
+                    }
+                    else {
+                        [self borraVariables];
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                        
+                            [self.loginButton setEnabled:TRUE];
+                            [self.loading stopAnimating];
+                            [self.loading setHidden:TRUE];
+                        });
+                    }
                 });
                 
                 
@@ -118,9 +128,12 @@
     }
     else
     {
-        NSDictionary *oAuth = [NSJSONSerialization JSONObjectWithData:self.viewController.receivedData options:0 error:nil];
-        [self.auth setAuth:oAuth];
-        [self goToNextView];
+        // Es fa servir si vols fer sempre l'autenticacio per web.
+        if(self.viewController.receivedData != nil){
+            NSDictionary *oAuth = [NSJSONSerialization JSONObjectWithData:self.viewController.receivedData options:0 error:nil];
+            [self.auth setAuth:oAuth];
+            [self goToNextView];
+        }
     }
 }
 
@@ -153,6 +166,7 @@
     PDKeychainBindings *keychainDef = [PDKeychainBindings sharedKeychainBindings];
     NSUserDefaults *stdDefaults = [NSUserDefaults standardUserDefaults];
     if([stdDefaults objectForKey:@"registrada"]==FALSE){
+        // Al fer el login donem el nom del dispositiu.
         if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
             self.viewController = [[webController alloc] initWithNibName:@"ipadWebLogin" bundle:nil];
             self.viewController.extra = [[NSString stringWithFormat:@"device=%@&", [[UIDevice currentDevice] name]] stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
@@ -186,7 +200,7 @@
                 if(self.auth.accessToken != nil) [self goToNextView];
                 else {
                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"LOGIN ERROR"
-                                                                    message:@"You need internet connection."
+                                                                    message:@"You need internet connection.\nIf you have internet connection, you should Log Out."
                                                                    delegate:self
                                                           cancelButtonTitle:@"OK"
                                                           otherButtonTitles:nil];

@@ -39,6 +39,8 @@
         urlReq= [NSURL URLWithString:[[NSString alloc] initWithFormat:@"%@?%@client_id=%@&redirect_uri=%@&response_type=code",urlAuth, self.extra, idClient, urlRedirect]];
     }
     else{
+        // Aquesta opcio esta per si es volgues obtenir el (nou) access_token sempre per web i no mitjancant el refresh_token
+
         PDKeychainBindings *keychainDef = [PDKeychainBindings sharedKeychainBindings];
        
         urlReq= [NSURL URLWithString:[[NSString alloc] initWithFormat:@"%@?%@client_id=%@&redirect_uri=%@&response_type=code",urlAuth, self.extra, [keychainDef objectForKey:@"client"], urlRedirect]];
@@ -62,7 +64,8 @@
             NSLog(@"key: %@, value: %@ \n", key, [dict objectForKey:key]);
         }
     } */
-    
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
@@ -100,6 +103,7 @@
                             idClient, secretClient, code, urlRedirect];
     }
     else {
+        // Aquesta opcio esta per si es volgues obtenir l'access_token sempre per web i no mitjancant el refresh_token
         PDKeychainBindings *keychainDef = [PDKeychainBindings sharedKeychainBindings];
 
         postString = [NSString stringWithFormat:@"client_id=%@" \
@@ -115,12 +119,13 @@
     [tokenRequest setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
     
     [NSURLConnection connectionWithRequest:tokenRequest delegate:self];
-    //accessTokenExchangeConnection.requestType = OAPIConnectionTokenExchangeType;
     
 }
 
 - (void) webViewDidStartLoad:(UIWebView *)webView2{
     //NSLog(@"Start -%@", [webView2.request URL]);
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+
 }
 
 - (NSDictionary *)parseQueryString:(NSString *)query {
@@ -150,6 +155,7 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     NSUserDefaults *stdDefaults = [NSUserDefaults standardUserDefaults];
     PDKeychainBindings *keychainDef = [PDKeychainBindings sharedKeychainBindings];
 

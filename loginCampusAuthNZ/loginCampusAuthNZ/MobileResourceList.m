@@ -23,10 +23,10 @@
 
 /**
  * Get the list of resources available for mobile
- * The user must have given the application the grant READ_BOARD to use these operation.
+ * The user must have given the application the grant READ to use these operation.
  *
  * @param token the token obtained with the autentication
- * @return Array of Messages with the unread messages of the given folder of the communication's resource.
+ * @return Array of MobileResources.
  */
 - (NSMutableArray *) getMobileResources:(NSString *)token
 {

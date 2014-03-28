@@ -32,9 +32,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WbF-1L-wsF">
-                                <rect key="frame" x="365" y="497" width="38" height="30"/>
+                                <rect key="frame" x="363" y="497" width="43" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="Log in">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -70,7 +70,7 @@
                     <connections>
                         <outlet property="loading" destination="XPj-Vy-1i9" id="ZC5-Z5-grY"/>
                         <outlet property="loginButton" destination="WbF-1L-wsF" id="jff-h4-rUa"/>
-                        <segue destination="Fp2-gU-1i8" kind="push" id="kfB-h9-RZu"/>
+                        <segue destination="Fp2-gU-1i8" kind="push" identifier="fromLoginToNext" id="kfB-h9-RZu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLM-on-36o" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -159,10 +159,10 @@
                         <outlet property="gotoMobileResourcesGet" destination="cah-Ct-3g5" id="bX2-4N-LSk"/>
                         <outlet property="gotoUserGet" destination="zel-QX-a6y" id="qRV-Xi-eFt"/>
                         <outlet property="tokenActual" destination="KGV-Yl-tjr" id="7W6-3d-yDd"/>
-                        <segue destination="KCz-Kr-OcI" kind="push" id="Fmk-7F-tiC"/>
-                        <segue destination="Sv5-qb-iPT" kind="push" id="Zgu-HA-OET"/>
-                        <segue destination="kFn-y3-zNF" kind="push" id="g7m-Db-47Y"/>
-                        <segue destination="KIR-K2-uSU" kind="push" id="myy-rx-qvw"/>
+                        <segue destination="KCz-Kr-OcI" kind="push" identifier="fromNextViewtoUser" id="Fmk-7F-tiC"/>
+                        <segue destination="Sv5-qb-iPT" kind="push" identifier="fromNextViewtoMailMessages" id="Zgu-HA-OET"/>
+                        <segue destination="kFn-y3-zNF" kind="push" identifier="fromNextViewtoCalendarPost" id="g7m-Db-47Y"/>
+                        <segue destination="KIR-K2-uSU" kind="push" identifier="FromNexttoMobileResourcesGet" id="myy-rx-qvw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SkD-dL-grm" userLabel="First Responder" sceneMemberID="firstResponder"/>

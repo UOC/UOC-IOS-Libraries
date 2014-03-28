@@ -14,7 +14,7 @@
 
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
 @property (nonatomic, strong) NSMutableData *receivedData;
-@property (nonatomic, retain) NSData *rebut;
+//@property (nonatomic, retain) NSData *rebut;
 @property (nonatomic, weak) NSString *extra;
 
 - (void)accessTokenGET:(NSString *)code;

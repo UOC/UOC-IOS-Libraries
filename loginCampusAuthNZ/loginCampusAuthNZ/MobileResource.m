@@ -29,7 +29,14 @@
 }
 
 
-
+/**
+ * Get the data of a mobileresource with a identifier
+ * The user must have given the application the grant READ to use these operation.
+ *
+ * @param idenR MobileResource identifier
+ * @param token the token obtained with the autentication
+ * @return MobileResource object with MobileResource data.
+ */
 -(MobileResource *) getMobileResourcesId:(NSString *)idenR withToken:(NSString *)token
 {
     MobileResource *r = [[MobileResource alloc] init];
@@ -53,7 +60,14 @@
     return r;
 }
 
-
+/**
+ * Get the data of a mobileresource from a concrete type
+ * The user must have given the application the grant READ to use these operation.
+ *
+ * @param type MobileResource type
+ * @param token the token obtained with the autentication
+ * @return MobileResource object with MobileResource data.
+ */
 -(MobileResource *) getMobileResourcesByType:(NSString *)type withToken:(NSString *)token
 {
     MobileResource *r = [[MobileResource alloc] init];
