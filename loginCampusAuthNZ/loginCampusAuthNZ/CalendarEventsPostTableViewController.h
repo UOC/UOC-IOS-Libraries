@@ -16,7 +16,7 @@
 
 @property (nonatomic, retain) authObj *auth;
 @property (nonatomic, retain) NSMutableArray *events;
-@property (nonatomic, assign) BOOL isLoad;
+//@property (nonatomic, assign) BOOL isLoad;
 
 - (void)cargarEventos;
 

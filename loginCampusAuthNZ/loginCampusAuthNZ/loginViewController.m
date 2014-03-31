@@ -23,9 +23,6 @@
     self.auth = [[authObj alloc]init];
     NSLog(@"viewDidLoad");
     [self.loading setHidden:TRUE];
-    //NSUserDefaults *stdDefaults = [NSUserDefaults standardUserDefaults];
-    //[stdDefaults removeObjectForKey:@"firstLogin"];
-    //[stdDefaults removeObjectForKey:@"registrada"];
 	// Do any additional setup after loading the view.
     
 }
@@ -62,6 +59,8 @@
         [storage deleteCookie:cookie];
     }
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    self.auth = [[authObj alloc]init];
 
 }
 
