@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:loginCampusAuthNZ.xcodeproj">
+      location = "self:Open APIS.xcodeproj">
    </FileRef>
 </Workspace>

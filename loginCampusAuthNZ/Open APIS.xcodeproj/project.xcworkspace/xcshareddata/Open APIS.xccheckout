@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D7A7AA31-9CEE-4ECE-A2F6-89F5E03B152F</string>
+	<string>00EA2D27-0C01-45C8-97BF-3E9075F5E832</string>
 	<key>IDESourceControlProjectName</key>
-	<string>loginCampusAuthNZ</string>
+	<string>Open APIS</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>6B072AC3-8F94-4325-B1CD-9F81697151AE</key>
+		<key>FB0F603C-4FCF-4FDF-BE16-B76E5EDC0477</key>
 		<string>https://github.com/UOC/UOC-IOS-Libraries.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>loginCampusAuthNZ/loginCampusAuthNZ.xcodeproj/project.xcworkspace</string>
+	<string>loginCampusAuthNZ/Open APIS.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>6B072AC3-8F94-4325-B1CD-9F81697151AE</key>
+		<key>FB0F603C-4FCF-4FDF-BE16-B76E5EDC0477</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>6B072AC3-8F94-4325-B1CD-9F81697151AE</string>
+	<string>FB0F603C-4FCF-4FDF-BE16-B76E5EDC0477</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>6B072AC3-8F94-4325-B1CD-9F81697151AE</string>
+			<string>FB0F603C-4FCF-4FDF-BE16-B76E5EDC0477</string>
 			<key>IDESourceControlWCCName</key>
 			<string>UOC-IOS-Libraries</string>
 		</dict>

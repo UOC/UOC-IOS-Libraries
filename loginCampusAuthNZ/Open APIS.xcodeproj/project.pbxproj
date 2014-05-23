@@ -79,14 +79,14 @@
 		DDE1D40518B21AF200050737 /* webController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = webController.xib; sourceTree = "<group>"; };
 		DDE5A87B18B4AF90007C0C39 /* authObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = authObj.h; sourceTree = "<group>"; };
 		DDE5A87C18B4AF90007C0C39 /* authObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = authObj.m; sourceTree = "<group>"; };
-		DDE72D3A18AE15C7003DDF77 /* loginCampusAuthNZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loginCampusAuthNZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDE72D3A18AE15C7003DDF77 /* Open APIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Open APIS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE72D3D18AE15C7003DDF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DDE72D3F18AE15C7003DDF77 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DDE72D4118AE15C7003DDF77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		DDE72D4518AE15C7003DDF77 /* loginCampusAuthNZ-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "loginCampusAuthNZ-Info.plist"; sourceTree = "<group>"; };
+		DDE72D4518AE15C7003DDF77 /* Open APIS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Open APIS-Info.plist"; sourceTree = "<group>"; };
 		DDE72D4718AE15C7003DDF77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DDE72D4918AE15C7003DDF77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DDE72D4B18AE15C7003DDF77 /* loginCampusAuthNZ-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "loginCampusAuthNZ-Prefix.pch"; sourceTree = "<group>"; };
+		DDE72D4B18AE15C7003DDF77 /* Open APIS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Open APIS-Prefix.pch"; sourceTree = "<group>"; };
 		DDE72D4C18AE15C7003DDF77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DDE72D4D18AE15C7003DDF77 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DDE72D5018AE15C7003DDF77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 		DDE72D3B18AE15C7003DDF77 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DDE72D3A18AE15C7003DDF77 /* loginCampusAuthNZ.app */,
+				DDE72D3A18AE15C7003DDF77 /* Open APIS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,10 +247,10 @@
 		DDE72D4418AE15C7003DDF77 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DDE72D4518AE15C7003DDF77 /* loginCampusAuthNZ-Info.plist */,
+				DDE72D4518AE15C7003DDF77 /* Open APIS-Info.plist */,
 				DDE72D4618AE15C7003DDF77 /* InfoPlist.strings */,
 				DDE72D4918AE15C7003DDF77 /* main.m */,
-				DDE72D4B18AE15C7003DDF77 /* loginCampusAuthNZ-Prefix.pch */,
+				DDE72D4B18AE15C7003DDF77 /* Open APIS-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -353,9 +353,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DDE72D3918AE15C7003DDF77 /* loginCampusAuthNZ */ = {
+		DDE72D3918AE15C7003DDF77 /* Open APIS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDE72D7218AE15C8003DDF77 /* Build configuration list for PBXNativeTarget "loginCampusAuthNZ" */;
+			buildConfigurationList = DDE72D7218AE15C8003DDF77 /* Build configuration list for PBXNativeTarget "Open APIS" */;
 			buildPhases = (
 				DDE72D3618AE15C7003DDF77 /* Sources */,
 				DDE72D3718AE15C7003DDF77 /* Frameworks */,
@@ -365,9 +365,9 @@
 			);
 			dependencies = (
 			);
-			name = loginCampusAuthNZ;
+			name = "Open APIS";
 			productName = loginCampusAuthNZ;
-			productReference = DDE72D3A18AE15C7003DDF77 /* loginCampusAuthNZ.app */;
+			productReference = DDE72D3A18AE15C7003DDF77 /* Open APIS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -398,7 +398,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DDE72D3518AE15C7003DDF77 /* Build configuration list for PBXProject "loginCampusAuthNZ" */;
+			buildConfigurationList = DDE72D3518AE15C7003DDF77 /* Build configuration list for PBXProject "Open APIS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -411,7 +411,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DDE72D3918AE15C7003DDF77 /* loginCampusAuthNZ */,
+				DDE72D3918AE15C7003DDF77 /* Open APIS */,
 			);
 		};
 /* End PBXProject section */
@@ -596,8 +596,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "loginCampusAuthNZ/loginCampusAuthNZ-Prefix.pch";
-				INFOPLIST_FILE = "loginCampusAuthNZ/loginCampusAuthNZ-Info.plist";
+				GCC_PREFIX_HEADER = "loginCampusAuthNZ/Open APIS-Prefix.pch";
+				INFOPLIST_FILE = "loginCampusAuthNZ/Open APIS-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
@@ -606,7 +606,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Open APIS";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -620,8 +620,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "loginCampusAuthNZ/loginCampusAuthNZ-Prefix.pch";
-				INFOPLIST_FILE = "loginCampusAuthNZ/loginCampusAuthNZ-Info.plist";
+				GCC_PREFIX_HEADER = "loginCampusAuthNZ/Open APIS-Prefix.pch";
+				INFOPLIST_FILE = "loginCampusAuthNZ/Open APIS-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
@@ -631,7 +631,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Open APIS";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -640,7 +640,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DDE72D3518AE15C7003DDF77 /* Build configuration list for PBXProject "loginCampusAuthNZ" */ = {
+		DDE72D3518AE15C7003DDF77 /* Build configuration list for PBXProject "Open APIS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DDE72D7018AE15C8003DDF77 /* Debug */,
@@ -649,7 +649,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDE72D7218AE15C8003DDF77 /* Build configuration list for PBXNativeTarget "loginCampusAuthNZ" */ = {
+		DDE72D7218AE15C8003DDF77 /* Build configuration list for PBXNativeTarget "Open APIS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DDE72D7318AE15C8003DDF77 /* Debug */,

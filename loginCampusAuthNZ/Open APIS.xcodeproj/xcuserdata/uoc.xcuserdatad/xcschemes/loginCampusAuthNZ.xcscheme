@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DDE72D3918AE15C7003DDF77"
-               BuildableName = "loginCampusAuthNZ.app"
-               BlueprintName = "loginCampusAuthNZ"
-               ReferencedContainer = "container:loginCampusAuthNZ.xcodeproj">
+               BuildableName = "Open APIS.app"
+               BlueprintName = "Open APIS"
+               ReferencedContainer = "container:Open APIS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "DDE72D6018AE15C8003DDF77"
                BuildableName = "loginCampusAuthNZTests.xctest"
                BlueprintName = "loginCampusAuthNZTests"
-               ReferencedContainer = "container:loginCampusAuthNZ.xcodeproj">
+               ReferencedContainer = "container:Open APIS.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDE72D3918AE15C7003DDF77"
-            BuildableName = "loginCampusAuthNZ.app"
-            BlueprintName = "loginCampusAuthNZ"
-            ReferencedContainer = "container:loginCampusAuthNZ.xcodeproj">
+            BuildableName = "Open APIS.app"
+            BlueprintName = "Open APIS"
+            ReferencedContainer = "container:Open APIS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDE72D3918AE15C7003DDF77"
-            BuildableName = "loginCampusAuthNZ.app"
-            BlueprintName = "loginCampusAuthNZ"
-            ReferencedContainer = "container:loginCampusAuthNZ.xcodeproj">
+            BuildableName = "Open APIS.app"
+            BlueprintName = "Open APIS"
+            ReferencedContainer = "container:Open APIS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDE72D3918AE15C7003DDF77"
-            BuildableName = "loginCampusAuthNZ.app"
-            BlueprintName = "loginCampusAuthNZ"
-            ReferencedContainer = "container:loginCampusAuthNZ.xcodeproj">
+            BuildableName = "Open APIS.app"
+            BlueprintName = "Open APIS"
+            ReferencedContainer = "container:Open APIS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

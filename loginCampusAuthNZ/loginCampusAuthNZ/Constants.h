@@ -10,10 +10,10 @@
 #define loginCampusAuthNZ_Constants_h
 
 #define keychainName    @"OpenApi_UOC"
-#define urlToken        @"http://54.195.251.79:8080/uocapi/oauth/token"
-#define urlAuth         @"http://54.195.251.79:8080/uocapi/oauth/authorize"
-#define urlApp          @"http://54.195.251.79:8080/uocapi/api/v1/app"
-#define baseUrl         @"http://54.195.251.79:8080/uocapi/api/v1/"
+#define urlToken        @"http://54.247.86.202:8080/uocapi/oauth/token"
+#define urlAuth         @"http://54.247.86.202:8080/uocapi/oauth/authorize"
+#define urlApp          @"http://54.247.86.202:8080/uocapi/api/v1/app"
+#define baseUrl         @"http://54.247.86.202:8080/uocapi/api/v1/"
 #define urlRedirect     @"openApi://oslo.uoc.es:8080/webapps/uocapi/api/v1/"
 
 #define idClient        @"EUI3WhtdZMjwOLxwFyzUcLUUXeE0ACmB6See1HWRjoCSIgGJ1If8EI8EPorzSWFRRnw1fxkOvIqkBI1d91GGKKG6nFnD35OY6VOEx4LcFLQIW3Z2jGsTaYey4bUcbR4K" // S'ha de canviar per el client que s'ha donat especificament per la seva app
