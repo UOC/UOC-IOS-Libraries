@@ -35,4 +35,7 @@ Step 4: Change the NextViewController with the first view of your program after 
 
 You can find more information in our [blog][OpenApi].
 
+You can find the Swift repository [here][Swift].
+
 [OpenApi]: http://open-api.uoc.edu/documentacio/uoc-public-api/
+[Swift]: https://github.com/UOC/UOC-IOS-Swift-Libraries
